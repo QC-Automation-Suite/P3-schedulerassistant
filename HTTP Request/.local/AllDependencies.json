@@ -17800,9 +17800,9 @@
     "restore": {
       "projectUniqueName": "HTTP Request",
       "projectName": "HTTP Request",
-      "projectPath": "C:\\Users\\Steven\\Documents\\UiPath\\HTTP Request\\.local",
+      "projectPath": "C:\\Users\\Steven\\Documents\\UiPath\\P3-schedulerassistant\\HTTP Request\\.local",
       "packagesPath": "C:\\Users\\Steven\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Steven\\Documents\\UiPath\\HTTP Request\\.local"
+      "outputPath": "C:\\Users\\Steven\\Documents\\UiPath\\P3-schedulerassistant\\HTTP Request\\.local"
     },
     "frameworks": {
       "net5.0-windows7.0": {
