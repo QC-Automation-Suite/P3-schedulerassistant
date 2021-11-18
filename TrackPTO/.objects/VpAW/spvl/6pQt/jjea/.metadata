@@ -1,0 +1,14 @@
+﻿{
+  "Id": "jjeaX207pUScxFduVEWnbQ",
+  "Reference": "LhJG8Z1Bik6OoE66hyQX0w/jjeaX207pUScxFduVEWnbQ",
+  "ParentRef": "LhJG8Z1Bik6OoE66hyQX0w/6pQtBs3afkarjpals2t-Gg",
+  "Name": "Click 'Dummy Schedule - Dec 6'",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-11-17T23:39:21.2042531Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-11-17T23:39:21.2042531Z"
+}
