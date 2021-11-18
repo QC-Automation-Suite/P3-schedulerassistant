@@ -34,7 +34,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="27">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="54">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -62,6 +62,12 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="EvaluateNewSheet" sap:VirtualizedContainerService.HintSize="375.2,692" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -100,12 +106,14 @@
                   <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
                   <av:Size x:Key="ShapeSize">60,75.2</av:Size>
                   <av:PointCollection x:Key="ConnectorLocation">270,40.1 240,40.1 240,60 210,60</av:PointCollection>
+                  <x:Double x:Key="Width">925.6000000000001</x:Double>
+                  <x:Double x:Key="Height">638.4</x:Double>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Flowchart.StartNode>
-                <x:Reference>__ReferenceID4</x:Reference>
+                <x:Reference>__ReferenceID6</x:Reference>
               </Flowchart.StartNode>
-              <FlowStep x:Name="__ReferenceID4">
+              <FlowStep x:Name="__ReferenceID6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">10,33.6</av:Point>
@@ -138,7 +146,7 @@
                 <FlowStep.Next>
                   <FlowDecision x:Name="__ReferenceID0" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                     <FlowDecision.Condition>
-                      <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="batchinfo = &quot;&quot;" />
+                      <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="batchinfo = &quot;&quot; Or batchinfo.Contains(&quot;Time&quot;)" />
                     </FlowDecision.Condition>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -167,41 +175,107 @@
                       </FlowStep>
                     </FlowDecision.True>
                     <FlowDecision.False>
-                      <FlowDecision x:Name="__ReferenceID2" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
-                        <FlowDecision.Condition>
-                          <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Cint(batchwk)&gt;12" />
-                        </FlowDecision.Condition>
+                      <FlowDecision x:Name="__ReferenceID2" Condition="[Cint(batchwk)&gt;12]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <av:Point x:Key="ShapeLocation">430.4,276.4</av:Point>
                             <av:Size x:Key="ShapeSize">79.2,87.2</av:Size>
-                            <av:PointCollection x:Key="TrueConnector">430.4,320 400.4,320 400.4,340 310,340</av:PointCollection>
+                            <av:PointCollection x:Key="TrueConnector">430.4,320 400.4,320 400.4,340 340,340</av:PointCollection>
+                            <av:PointCollection x:Key="FalseConnector">509.59999999999997,320 730,320 730,386.4</av:PointCollection>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <FlowDecision.True>
                           <FlowStep x:Name="__ReferenceID3">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <av:Point x:Key="ShapeLocation">110,313.6</av:Point>
+                                <av:Point x:Key="ShapeLocation">140,313.6</av:Point>
                                 <av:Size x:Key="ShapeSize">200,52.8</av:Size>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                              <ui:CommentOut.Body>
-                                <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                                  <ui:ExcelInsertDeleteRows DisplayName="Insert/Delete Rows" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="ExcelInsertDeleteRows_1" Mode="Remove" NoRows="1" Position="1" SheetName="Sheet1">
+                            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx">
+                              <ui:ExcelApplicationScope.Body>
+                                <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="324.8,280.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                  </ui:ExcelInsertDeleteRows>
-                                </Sequence>
-                              </ui:CommentOut.Body>
-                            </ui:CommentOut>
+                                    <ui:ExcelInsertDeleteRows DisplayName="Insert/Delete Rows" sap:VirtualizedContainerService.HintSize="283.2,188" sap2010:WorkflowViewState.IdRef="ExcelInsertDeleteRows_2" Mode="Remove" NoRows="1" Position="[i+3]" SheetName="Dec  13">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:ExcelInsertDeleteRows>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:ExcelApplicationScope.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:ExcelApplicationScope>
                           </FlowStep>
                         </FlowDecision.True>
+                        <FlowDecision.False>
+                          <FlowDecision x:Name="__ReferenceID4" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                            <FlowDecision.Condition>
+                              <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Cint(batchwk)&gt;10 And Not batchinfo.Contains(&quot;Extended&quot;)" />
+                            </FlowDecision.Condition>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <av:Point x:Key="ShapeLocation">690.4,386.4</av:Point>
+                                <av:Size x:Key="ShapeSize">79.2,87.2</av:Size>
+                                <av:PointCollection x:Key="TrueConnector">690.4,430 509.99999999999994,430 509.99999999999994,483.59999999999997</av:PointCollection>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <FlowDecision.True>
+                              <FlowStep x:Name="__ReferenceID5">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">409.99999999999994,483.59999999999997</av:Point>
+                                    <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx">
+                                  <ui:ExcelApplicationScope.Body>
+                                    <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="324.8,280.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:ExcelInsertDeleteRows DisplayName="Insert/Delete Rows" sap:VirtualizedContainerService.HintSize="283.2,188" sap2010:WorkflowViewState.IdRef="ExcelInsertDeleteRows_4" Mode="Remove" NoRows="1" Position="[i+3]" SheetName="Dec  13">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:ExcelInsertDeleteRows>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </ui:ExcelApplicationScope.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:ExcelApplicationScope>
+                              </FlowStep>
+                            </FlowDecision.True>
+                          </FlowDecision>
+                        </FlowDecision.False>
                       </FlowDecision>
                     </FlowDecision.False>
                   </FlowDecision>
@@ -211,6 +285,8 @@
               <x:Reference>__ReferenceID1</x:Reference>
               <x:Reference>__ReferenceID2</x:Reference>
               <x:Reference>__ReferenceID3</x:Reference>
+              <x:Reference>__ReferenceID4</x:Reference>
+              <x:Reference>__ReferenceID5</x:Reference>
             </Flowchart>
             <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[group(&quot;Column1&quot;).ToString]" />
             <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[group(&quot;Column8&quot;).ToString]" />
