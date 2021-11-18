@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<TargetApp Area="0, 0, 0, 0" Arguments="c:\users\hahme\documents\revature\hbksilver-code\interpret excel results - example\excel\dummy qc schedule copy (1).xlsx" ContentHash="RGoxKnM55Uqv2diOZZszFw" FilePath="C:\Program Files\Microsoft Office\root\Office16\excel.exe" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='Dummy QC Schedule Copy (1) - Excel'/&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
-  <imageRef attrName="IconBase64" xmlns="">0GTYCShmwn0SlZoEpfbS09w</imageRef>
-  <imageRef attrName="InformativeScreenshot" originalValue="3f90716b656f23e858ff73131c719635.png" xmlns="">0m_kdMfx-GEmGjzweH46Ckw</imageRef>
-</TargetApp>
