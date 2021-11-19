@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable ContentHash="LvEgk27xQUa5OGGx4eACxg" DesignTimeRectangle="793, 1446, 343, 43" FriendlyName="'Dummy Schedule - Dec 6'" FullSelectorArgument="&lt;uia automationid='Dummy QC Schedule Copy (1).xlsx' cls='ExcelBookTabControl' name='Dummy QC Schedule Copy (1)' /&gt;&lt;uia automationid='SheetTab' name='Dummy Schedule - Dec 6' role='Sheet Tab' /&gt;" FuzzySelectorArgument="&lt;uia automationid='Dummy QC Schedule Copy (1).xlsx' cls='ExcelBookTabControl' name='Dummy QC Schedule Copy (1)' /&gt;&lt;uia automationid='SheetTab' name='Dummy Schedule - Dec 6' role='Sheet Tab' check:fulltext='Dummy Schedule - Dec 6' /&gt;" Guid="8d50aa86-82a2-47ae-8fcf-f87369768eff" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Dummy QC Schedule Copy (1) - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">02aQK-dxZvk6LpuKXDlgDFA</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="4f0fb688ea1b1ab0fe78c70ddf436467.png" xmlns="">0A5zILuhICkKR8F3D4ixUCg</imageRef>
+</TargetAnchorable>
