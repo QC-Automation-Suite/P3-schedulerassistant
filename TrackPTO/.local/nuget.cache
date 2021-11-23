@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qH3WhVUzPSD5ZD/mTvLtTr7DXyf4yGZKUU/TkrvJ0JqTkOKsBkFpcW4Ub9yRhP0+fWZRZs/gb5yDesMChyw3sQ==",
+  "dgSpecHash": "7dyq8QR2lEf0T3IcEqYHTyaWRpz93SglaP/nH+iUcM095NIDGQspobqP6bICg09nF8mLmEhx5K8qo8RqiD/6yQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\hahme\\Documents\\UiPath\\TrackPTO\\.local\\",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\hahme\\.nuget\\packages\\google.apis.gmail.v1\\1.43.0.1859\\google.apis.gmail.v1.1.43.0.1859.nupkg.sha512",
     "C:\\Users\\hahme\\.nuget\\packages\\google.apis.peopleservice.v1\\1.43.0.1876\\google.apis.peopleservice.v1.1.43.0.1876.nupkg.sha512",
     "C:\\Users\\hahme\\.nuget\\packages\\mailkit\\2.10.0\\mailkit.2.10.0.nupkg.sha512",
+    "C:\\Users\\hahme\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9\\microsoft.activities.extensions.2.0.6.9.nupkg.sha512",
     "C:\\Users\\hahme\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0\\microsoft.aspnet.signalr.client.2.4.0.nupkg.sha512",
     "C:\\Users\\hahme\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\3.1.6\\microsoft.aspnetcore.connections.abstractions.3.1.6.nupkg.sha512",
     "C:\\Users\\hahme\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\3.1.6\\microsoft.aspnetcore.http.connections.client.3.1.6.nupkg.sha512",
@@ -87,7 +88,7 @@
     "C:\\Users\\hahme\\.nuget\\packages\\uipath.connectionclient\\1.0.0-20210921.1\\uipath.connectionclient.1.0.0-20210921.1.nupkg.sha512",
     "C:\\Users\\hahme\\.nuget\\packages\\uipath.excel.activities\\2.11.4\\uipath.excel.activities.2.11.4.nupkg.sha512",
     "C:\\Users\\hahme\\.nuget\\packages\\uipath.imageprocessing\\21.10.2\\uipath.imageprocessing.21.10.2.nupkg.sha512",
-    "C:\\Users\\hahme\\.nuget\\packages\\uipath.mail.activities\\1.12.2\\uipath.mail.activities.1.12.2.nupkg.sha512",
+    "C:\\Users\\hahme\\.nuget\\packages\\uipath.mail.activities\\1.12.3\\uipath.mail.activities.1.12.3.nupkg.sha512",
     "C:\\Users\\hahme\\.nuget\\packages\\uipath.ocr.activities\\3.3.2\\uipath.ocr.activities.3.3.2.nupkg.sha512",
     "C:\\Users\\hahme\\.nuget\\packages\\uipath.ocr.contracts\\2.9.1\\uipath.ocr.contracts.2.9.1.nupkg.sha512",
     "C:\\Users\\hahme\\.nuget\\packages\\uipath.platform\\21.10.0\\uipath.platform.21.10.0.nupkg.sha512",

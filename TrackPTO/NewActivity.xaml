@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="688,2769" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="688,3123" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="45">
       <x:String>System.Activities</x:String>
@@ -49,7 +49,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -82,16 +82,17 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="644,2704" sap2010:WorkflowViewState.IdRef="Sequence_11">
+  <Sequence sap:VirtualizedContainerService.HintSize="644,3058" sap2010:WorkflowViewState.IdRef="Sequence_11">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtOuOfOffice" />
       <Variable x:TypeArguments="x:String" Name="ooo" />
       <Variable x:TypeArguments="sd:DataTable" Name="freeQC" />
       <Variable x:TypeArguments="sd:DataTable" Name="mydt" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_QC" />
+      <Variable x:TypeArguments="x:String" Name="level" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -170,7 +171,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If Condition="[CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Ronin&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Jordan&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Krystal&quot;) Or&#xD;&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Gael&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Dale&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Cristopher&quot;) Or&#xD;&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Andreas&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Miracle&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Zavier&quot;) Or&#xD;&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Curtis&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Margaret&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Russell&quot;) Or&#xD;&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Cassius&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Heather&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Triston&quot;) Or&#xD;&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Kenzie&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Skyler&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Triston&quot;) Or&#xD;&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Jordan&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Erika&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Kayley&quot;) Or&#xD;&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Kallie&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Case&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Tatum&quot;) Or&#xD;&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Muhammad&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Francisco&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Tristin&quot;) Or&#xD;&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Elena&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Bailee&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Mikayla&quot;) Or&#xD;&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Charlotte&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Tanner&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Valentin&quot;) Or&#xD;&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Angelo&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Shyanne&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Remington&quot;) Or&#xD;&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Will&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Janiah&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Brenton&quot;) Or&#xD;&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Braylen&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Chaz&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Remington&quot;) Or&#xD;&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Jon&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Asia&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Mary&quot;) Or&#xD;&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Dexter&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Harry&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Patricia&quot;) Or&#xD;&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Diana&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Drew&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Ashyah&quot;) Or&#xD;&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Ashya&quot;)]" sap:VirtualizedContainerService.HintSize="484,438" sap2010:WorkflowViewState.IdRef="If_6">
+              <If Condition="[CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Ronin&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Jordan&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Krystal&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Gael&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Dale&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Cristopher&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Andreas&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Miracle&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Zavier&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Curtis&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Margaret&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Russell&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Cassius&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Heather&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Triston&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Kenzie&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Skyler&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Triston&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Jordan&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Erika&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Kayley&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Kallie&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Case&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Tatum&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Muhammad&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Francisco&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Tristin&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Elena&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Bailee&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Mikayla&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Charlotte&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Tanner&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Valentin&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Angelo&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Shyanne&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Remington&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Will&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Janiah&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Brenton&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Braylen&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Chaz&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Remington&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Jon&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Asia&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Mary&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Dexter&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Harry&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Patricia&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Diana&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Drew&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Ashyah&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Ashya&quot;)]" sap:VirtualizedContainerService.HintSize="484,438" sap2010:WorkflowViewState.IdRef="If_6">
                 <If.Then>
                   <Sequence sap:VirtualizedContainerService.HintSize="304,254" sap2010:WorkflowViewState.IdRef="Sequence_119">
                     <sap:WorkflowViewStateService.ViewState>
@@ -303,5 +304,97 @@
       <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="WriteLine_68" Text="Trainers who are availabe, not in pto, ooo, nor starting a new batch................." />
       <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="WriteLine_63" Text="[ooo]" />
     </Sequence>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="602,222" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,144" sap2010:WorkflowViewState.IdRef="Sequence_141">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Flowchart sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+                <av:Size x:Key="ShapeSize">60,75</av:Size>
+                <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 310,107.5 310,114</av:PointCollection>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Flowchart.StartNode>
+              <x:Reference>__ReferenceID0</x:Reference>
+            </Flowchart.StartNode>
+            <FlowStep x:Name="__ReferenceID0">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">210,114</av:Point>
+                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke buildAuditorSkillSetTables workflow" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="buildAuditorSkillSetTables.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                </ui:InvokeWorkflowFile.Arguments>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:InvokeWorkflowFile>
+            </FlowStep>
+          </Flowchart>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <Flowchart sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+          <av:Size x:Key="ShapeSize">60,75</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,116</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Flowchart.StartNode>
+        <x:Reference>__ReferenceID1</x:Reference>
+      </Flowchart.StartNode>
+      <FlowStep x:Name="__ReferenceID1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">200,116</av:Point>
+            <av:Size x:Key="ShapeSize">200,68</av:Size>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Sequence sap:VirtualizedContainerService.HintSize="476,579" sap2010:WorkflowViewState.IdRef="Sequence_138">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="434,487" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+            <ueab:ExcelProcessScopeX.Body>
+              <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,401" sap2010:WorkflowViewState.IdRef="Sequence_139">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="variable1" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ReadRange AddHeaders="True" DataTable="[dt_QC]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_8" Range="A1:Q9" SheetName="Quality Analyst Skillset" WorkbookPath="Dummy QC Schedule Copy (1).xlsx" />
+                  <ui:OutputDataTable DataTable="[dt_QC]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="334,80" sap2010:WorkflowViewState.IdRef="OutputDataTable_4" Text="[level]" />
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="WriteLine_71" Text="[level]" />
+                </Sequence>
+              </ActivityAction>
+            </ueab:ExcelProcessScopeX.Body>
+          </ueab:ExcelProcessScopeX>
+        </Sequence>
+      </FlowStep>
+    </Flowchart>
   </Sequence>
 </Activity>
