@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="buildAuditorSkillSetTables" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1069,14571" sap2010:WorkflowViewState.IdRef="buildAuditorSkillSetTables_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="buildAuditorSkillSetTables" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1033,47724" sap2010:WorkflowViewState.IdRef="buildAuditorSkillSetTables_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="28">
       <x:String>System.Activities</x:String>
@@ -55,7 +55,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="863,14466" sap2010:WorkflowViewState.IdRef="Sequence_17">
+  <Sequence DisplayName="OuterSequence" sap:VirtualizedContainerService.HintSize="1043,47619" sap2010:WorkflowViewState.IdRef="Sequence_17">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="counterDexpert" />
       <Variable x:TypeArguments="x:Int32" Name="counterDproficient" />
@@ -67,29 +67,50 @@
       <Variable x:TypeArguments="sd1:Color" Name="beginner" />
       <Variable x:TypeArguments="sd1:Color" Name="noKnowledge" />
       <Variable x:TypeArguments="x:String" Name="see" />
+      <Variable x:TypeArguments="sd:DataTable" Name="SalesForceAuditorsDT" />
+      <Variable x:TypeArguments="sd:DataTable" Name="JavaAuditorsDT" />
+      <Variable x:TypeArguments="sd:DataTable" Name="JwAAuditorsDT" />
+      <Variable x:TypeArguments="sd:DataTable" Name="NetAuditorsDT" />
+      <Variable x:TypeArguments="sd:DataTable" Name="ServiceNowAuditorsDT" />
+      <Variable x:TypeArguments="x:String" Name="auditor" />
+      <Variable x:TypeArguments="sd:DataRow" Name="newRowJavaDT" />
+      <Variable x:TypeArguments="sd:DataRow" Name="newRowJwADT" />
+      <Variable x:TypeArguments="sd:DataRow" Name="newTrainerRowJavaDT" />
+      <Variable x:TypeArguments="sd:DataRow" Name="newRowNetDT" />
+      <Variable x:TypeArguments="sd:DataRow" Name="newRowSalesForceDT" />
+      <Variable x:TypeArguments="sd:DataRow" Name="newRowPegaDT" />
+      <Variable x:TypeArguments="sd:DataRow" Name="newRowJavaEnterpriseDT" />
+      <Variable x:TypeArguments="sd:DataRow" Name="newRowBigDataDT" />
+      <Variable x:TypeArguments="sd:DataRow" Name="newRowAndroidDT" />
+      <Variable x:TypeArguments="sd:DataRow" Name="newRowiOSDT" />
+      <Variable x:TypeArguments="sd:DataRow" Name="newRowUiPathDT" />
+      <Variable x:TypeArguments="sd:DataRow" Name="newRowDevOpsDT" />
+      <Variable x:TypeArguments="sd:DataRow" Name="newRowPythonDT" />
+      <Variable x:TypeArguments="sd:DataRow" Name="newRowMuleSoftDT" />
+      <Variable x:TypeArguments="sd:DataRow" Name="newRowServiceNowDT" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="buildAuditorSkillSetTables" sap:VirtualizedContainerService.HintSize="821,7171" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence DisplayName="buildAuditorSkillSetTables" sap:VirtualizedContainerService.HintSize="1001,9253" sap2010:WorkflowViewState.IdRef="Sequence_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,7079" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,9161" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,6970" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,9052" sap2010:WorkflowViewState.IdRef="Sequence_5">
               <Sequence.Variables>
-                <Variable x:TypeArguments="sd:DataTable" Name="JavaAuditorsDT" />
-                <Variable x:TypeArguments="sd:DataTable" Name="JwAAuditorsDT" />
-                <Variable x:TypeArguments="sd:DataTable" Name="NetAuditorsDT" />
+                <Variable x:TypeArguments="sd:DataTable" Name="trainerSalesForceDT" />
+                <Variable x:TypeArguments="sd:DataTable" Name="trainerJwADT" />
+                <Variable x:TypeArguments="sd:DataTable" Name="trainerNetDT" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -102,7 +123,7 @@
               <ui:ExcelGetCellColor Cell="A16" Color="[beginner]" DisplayName="Get Cell Color" sap:VirtualizedContainerService.HintSize="703,59" sap2010:WorkflowViewState.IdRef="ExcelGetCellColor_4" SheetName="Quality Analyst Skillset" />
               <ui:ExcelGetCellColor Cell="A17" Color="[noKnowledge]" DisplayName="Get Cell Color" sap:VirtualizedContainerService.HintSize="703,59" sap2010:WorkflowViewState.IdRef="ExcelGetCellColor_5" SheetName="Quality Analyst Skillset" />
               <ui:ExcelReadRange AddHeaders="True" DataTable="[skillSetDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="703,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="B1:Q9" SheetName="Quality Analyst Skillset" />
-              <ui:BuildDataTable DataTable="[JavaAuditorsDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="703,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Auditor&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;skillLevel&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+              <ui:BuildDataTable DataTable="[JavaAuditorsDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="703,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Auditor&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;skillLevel&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
               <Assign sap:VirtualizedContainerService.HintSize="703,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Int32">[counterDexpert]</OutArgument>
@@ -119,17 +140,16 @@
                   <InArgument x:TypeArguments="x:Int32">2</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1605" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1600" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1457" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1453" sap2010:WorkflowViewState.IdRef="Sequence_4">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="sd1:Color" Name="v" />
                         <Variable x:TypeArguments="sd1:Color" Name="colorMatch" />
-                        <Variable x:TypeArguments="sd:DataRow" Name="newRowJavaDT" />
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -145,7 +165,7 @@
                           <InArgument x:TypeArguments="sd:DataRow">[JavaAuditorsDT.NewRow]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_1">
                         <If.Then>
                           <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_2">
                             <sap:WorkflowViewStateService.ViewState>
@@ -191,7 +211,7 @@
                           </Assign>
                         </If.Else>
                       </If>
-                      <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_2">
+                      <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_2">
                         <If.Then>
                           <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_3">
                             <sap:WorkflowViewStateService.ViewState>
@@ -241,8 +261,50 @@
                   </ActivityAction>
                 </ui:ForEachRow.Body>
               </ui:ForEachRow>
+              <ui:ExcelReadRange AddHeaders="True" DataTable="[trainerSalesForceDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="703,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_3" Range="A1:A42" SheetName="Trainer Info &amp; Skillsets" />
+              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[trainerSalesForceDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,561" sap2010:WorkflowViewState.IdRef="ForEachRow_18">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_169">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="sd:DataRow">[newTrainerRowJavaDT]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="sd:DataRow">[JavaAuditorsDT.NewRow]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_170">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Object">[newTrainerRowJavaDT("auditor")]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Object">[row("Trainers")]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_171">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Object">[newTrainerRowJavaDT("skillLevel")]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Object">["trainer"]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newTrainerRowJavaDT]" DataTable="[JavaAuditorsDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_29" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+              </ui:ForEachRow>
               <ui:OutputDataTable DataTable="[JavaAuditorsDT]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="703,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[see]" />
-              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,62" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[see]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[see]" />
               <ui:BuildDataTable DataTable="[JwAAuditorsDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="703,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Auditor&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;skillLevel&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
               <Assign sap:VirtualizedContainerService.HintSize="703,60" sap2010:WorkflowViewState.IdRef="Assign_12">
                 <Assign.To>
@@ -260,18 +322,17 @@
                   <InArgument x:TypeArguments="x:Int32">2</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1605" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1600" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1457" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1453" sap2010:WorkflowViewState.IdRef="Sequence_8">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="sd1:Color" Name="v" />
                         <Variable x:TypeArguments="sd1:Color" Name="colorMatch" />
                         <Variable x:TypeArguments="sd:DataRow" Name="newRowJavaDT" />
-                        <Variable x:TypeArguments="sd:DataRow" Name="newRowJwADT" />
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -287,7 +348,7 @@
                           <InArgument x:TypeArguments="sd:DataRow">[JwAAuditorsDT.NewRow]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_3">
+                      <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_3">
                         <If.Then>
                           <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_6">
                             <sap:WorkflowViewStateService.ViewState>
@@ -333,7 +394,7 @@
                           </Assign>
                         </If.Else>
                       </If>
-                      <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_4">
+                      <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_4">
                         <If.Then>
                           <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_7">
                             <sap:WorkflowViewStateService.ViewState>
@@ -383,8 +444,50 @@
                   </ActivityAction>
                 </ui:ForEachRow.Body>
               </ui:ForEachRow>
+              <ui:ExcelReadRange AddHeaders="True" DataTable="[trainerJwADT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="703,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_4" Range="G1:G8" SheetName="Trainer Info &amp; Skillsets" />
+              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[trainerJwADT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,561" sap2010:WorkflowViewState.IdRef="ForEachRow_19">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_82">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_172">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="sd:DataRow">[newRowJwADT]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="sd:DataRow">[JwAAuditorsDT.NewRow]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_173">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Object">[newRowJwADT("auditor")]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Object">[row("JwA")]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_174">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Object">[newRowJwADT("skillLevel")]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Object">["trainer"]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRowJwADT]" DataTable="[JwAAuditorsDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_30" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+              </ui:ForEachRow>
               <ui:OutputDataTable DataTable="[JwAAuditorsDT]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="703,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_2" Text="[see]" />
-              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,62" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[see]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[see]" />
               <ui:BuildDataTable DataTable="[NetAuditorsDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="703,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Auditor&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;skillLevel&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
               <Assign sap:VirtualizedContainerService.HintSize="703,60" sap2010:WorkflowViewState.IdRef="Assign_23">
                 <Assign.To>
@@ -402,18 +505,17 @@
                   <InArgument x:TypeArguments="x:Int32">2</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1605" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1600" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1457" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1453" sap2010:WorkflowViewState.IdRef="Sequence_11">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="sd1:Color" Name="v" />
                         <Variable x:TypeArguments="sd:DataRow" Name="newRowJavaDT" />
                         <Variable x:TypeArguments="sd:DataRow" Name="newRowJwADT" />
-                        <Variable x:TypeArguments="sd:DataRow" Name="newRowNetDT" />
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -429,7 +531,7 @@
                           <InArgument x:TypeArguments="sd:DataRow">[NetAuditorsDT.NewRow]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_5">
+                      <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_5">
                         <If.Then>
                           <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_9">
                             <sap:WorkflowViewStateService.ViewState>
@@ -475,7 +577,7 @@
                           </Assign>
                         </If.Else>
                       </If>
-                      <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_6">
+                      <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_6">
                         <If.Then>
                           <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_10">
                             <sap:WorkflowViewStateService.ViewState>
@@ -525,14 +627,56 @@
                   </ActivityAction>
                 </ui:ForEachRow.Body>
               </ui:ForEachRow>
+              <ui:ExcelReadRange AddHeaders="True" DataTable="[trainerNetDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="703,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_5" Range="H1:H9" SheetName="Trainer Info &amp; Skillsets" />
+              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[trainerNetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,561" sap2010:WorkflowViewState.IdRef="ForEachRow_20">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_85">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_175">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="sd:DataRow">[newRowNetDT]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="sd:DataRow">[NetAuditorsDT.NewRow]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_176">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Object">[newRowNetDT("auditor")]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Object">[row(".NET")]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_177">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Object">[newRowNetDT("skillLevel")]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Object">["trainer"]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRowNetDT]" DataTable="[NetAuditorsDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_31" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+              </ui:ForEachRow>
               <ui:OutputDataTable DataTable="[NetAuditorsDT]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="703,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_3" Text="[see]" />
-              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,62" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[see]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,61" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[see]" />
             </Sequence>
           </ActivityAction>
         </ui:ExcelApplicationScope.Body>
       </ui:ExcelApplicationScope>
     </Sequence>
-    <Sequence sap:VirtualizedContainerService.HintSize="821,2361" sap2010:WorkflowViewState.IdRef="Sequence_16">
+    <Sequence sap:VirtualizedContainerService.HintSize="1001,3055" sap2010:WorkflowViewState.IdRef="Sequence_16">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="SalesForceAuditorsDT" />
       </Sequence.Variables>
@@ -541,13 +685,16 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,2269" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,2963" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,2160" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,2854" sap2010:WorkflowViewState.IdRef="Sequence_15">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="sd:DataTable" Name="trainerSalesForceDT" />
+              </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -570,20 +717,19 @@
                   <InArgument x:TypeArguments="x:Int32">2</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1605" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1600" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1457" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1453" sap2010:WorkflowViewState.IdRef="Sequence_14">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="sd1:Color" Name="v" />
                         <Variable x:TypeArguments="sd1:Color" Name="colorMatch" />
                         <Variable x:TypeArguments="sd:DataRow" Name="newRowJavaDT" />
                         <Variable x:TypeArguments="sd:DataRow" Name="newRowJwADT" />
                         <Variable x:TypeArguments="sd:DataRow" Name="newRowNetDT" />
-                        <Variable x:TypeArguments="sd:DataRow" Name="newRowSalesForceDT" />
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -599,7 +745,7 @@
                           <InArgument x:TypeArguments="sd:DataRow">[SalesForceAuditorsDT.NewRow]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_7">
+                      <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_7">
                         <If.Then>
                           <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_12">
                             <sap:WorkflowViewStateService.ViewState>
@@ -645,7 +791,7 @@
                           </Assign>
                         </If.Else>
                       </If>
-                      <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_8">
+                      <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_8">
                         <If.Then>
                           <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_13">
                             <sap:WorkflowViewStateService.ViewState>
@@ -695,14 +841,56 @@
                   </ActivityAction>
                 </ui:ForEachRow.Body>
               </ui:ForEachRow>
+              <ui:ExcelReadRange AddHeaders="True" DataTable="[trainerSalesForceDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="703,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_6" Range="I1:I7" SheetName="Trainer Info &amp; Skillsets" />
+              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[trainerSalesForceDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,561" sap2010:WorkflowViewState.IdRef="ForEachRow_21">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_86">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_178">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="sd:DataRow">[newRowSalesForceDT]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="sd:DataRow">[SalesForceAuditorsDT.NewRow]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_179">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Object">[newRowSalesForceDT("auditor")]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Object">[row("SalesForce")]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_180">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Object">[newRowSalesForceDT("skillLevel")]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Object">["trainer"]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRowSalesForceDT]" DataTable="[SalesForceAuditorsDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_32" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+              </ui:ForEachRow>
               <ui:OutputDataTable DataTable="[SalesForceAuditorsDT]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="703,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_4" Text="[see]" />
-              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,62" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[see]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,61" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[see]" />
             </Sequence>
           </ActivityAction>
         </ui:ExcelApplicationScope.Body>
       </ui:ExcelApplicationScope>
     </Sequence>
-    <Sequence sap:VirtualizedContainerService.HintSize="821,2361" sap2010:WorkflowViewState.IdRef="Sequence_22">
+    <Sequence sap:VirtualizedContainerService.HintSize="1001,3055" sap2010:WorkflowViewState.IdRef="Sequence_22">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="SalesForceAuditorsDT" />
       </Sequence.Variables>
@@ -711,15 +899,16 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,2269" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,2963" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,2160" sap2010:WorkflowViewState.IdRef="Sequence_21">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,2854" sap2010:WorkflowViewState.IdRef="Sequence_21">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="PegaAuditorsDT" />
+                <Variable x:TypeArguments="sd:DataTable" Name="trainerPegaDT" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -743,20 +932,19 @@
                   <InArgument x:TypeArguments="x:Int32">2</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1605" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1600" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1457" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1453" sap2010:WorkflowViewState.IdRef="Sequence_20">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="sd1:Color" Name="v" />
                         <Variable x:TypeArguments="sd:DataRow" Name="newRowJavaDT" />
                         <Variable x:TypeArguments="sd:DataRow" Name="newRowJwADT" />
                         <Variable x:TypeArguments="sd:DataRow" Name="newRowNetDT" />
                         <Variable x:TypeArguments="sd:DataRow" Name="newRowSalesForceDT" />
-                        <Variable x:TypeArguments="sd:DataRow" Name="newRowPegaDT" />
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -772,7 +960,7 @@
                           <InArgument x:TypeArguments="sd:DataRow">[PegaAuditorsDT.NewRow]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_9">
+                      <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_9">
                         <If.Then>
                           <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_18">
                             <sap:WorkflowViewStateService.ViewState>
@@ -818,7 +1006,7 @@
                           </Assign>
                         </If.Else>
                       </If>
-                      <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_10">
+                      <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_10">
                         <If.Then>
                           <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_19">
                             <sap:WorkflowViewStateService.ViewState>
@@ -868,32 +1056,72 @@
                   </ActivityAction>
                 </ui:ForEachRow.Body>
               </ui:ForEachRow>
+              <ui:ExcelReadRange AddHeaders="True" DataTable="[trainerPegaDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="703,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_7" Range="J1:J4" SheetName="Trainer Info &amp; Skillsets" />
+              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[trainerPegaDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,561" sap2010:WorkflowViewState.IdRef="ForEachRow_22">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_87">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_181">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="sd:DataRow">[newRowPegaDT]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="sd:DataRow">[PegaAuditorsDT.NewRow]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_182">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Object">[newRowPegaDT("auditor")]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Object">[row("Pega")]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_183">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Object">[newRowPegaDT("skillLevel")]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Object">["trainer"]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRowPegaDT]" DataTable="[PegaAuditorsDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_33" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+              </ui:ForEachRow>
               <ui:OutputDataTable DataTable="[PegaAuditorsDT]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="703,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_5" Text="[see]" />
-              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,62" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[see]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,61" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[see]" />
             </Sequence>
           </ActivityAction>
         </ui:ExcelApplicationScope.Body>
       </ui:ExcelApplicationScope>
     </Sequence>
-    <Sequence sap:VirtualizedContainerService.HintSize="863,21819" sap2010:WorkflowViewState.IdRef="Sequence_27">
-      <Sequence.Variables>
-        <Variable x:TypeArguments="sd:DataTable" Name="SalesForceAuditorsDT" />
-      </Sequence.Variables>
+    <Sequence sap:VirtualizedContainerService.HintSize="1001,32044" sap2010:WorkflowViewState.IdRef="Sequence_27">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="821,2269" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="959,2963" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,2160" sap2010:WorkflowViewState.IdRef="Sequence_26">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,2854" sap2010:WorkflowViewState.IdRef="Sequence_26">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="PegaAuditorsDT" />
                 <Variable x:TypeArguments="sd:DataTable" Name="JavaEnterpriseAuditorsDT" />
+                <Variable x:TypeArguments="sd:DataTable" Name="trainerJavaEnterpriseDT" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -917,13 +1145,13 @@
                   <InArgument x:TypeArguments="x:Int32">2</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1605" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
+              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1600" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1457" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1453" sap2010:WorkflowViewState.IdRef="Sequence_25">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="sd1:Color" Name="v" />
                         <Variable x:TypeArguments="sd:DataRow" Name="newRowJavaDT" />
@@ -931,7 +1159,6 @@
                         <Variable x:TypeArguments="sd:DataRow" Name="newRowNetDT" />
                         <Variable x:TypeArguments="sd:DataRow" Name="newRowSalesForceDT" />
                         <Variable x:TypeArguments="sd:DataRow" Name="newRowPegaDT" />
-                        <Variable x:TypeArguments="sd:DataRow" Name="newRowJavaEnterpriseDT" />
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -947,7 +1174,7 @@
                           <InArgument x:TypeArguments="sd:DataRow">[JavaEnterpriseAuditorsDT.NewRow]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_11">
+                      <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_11">
                         <If.Then>
                           <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_23">
                             <sap:WorkflowViewStateService.ViewState>
@@ -993,7 +1220,7 @@
                           </Assign>
                         </If.Else>
                       </If>
-                      <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_12">
+                      <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_12">
                         <If.Then>
                           <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_24">
                             <sap:WorkflowViewStateService.ViewState>
@@ -1043,13 +1270,55 @@
                   </ActivityAction>
                 </ui:ForEachRow.Body>
               </ui:ForEachRow>
+              <ui:ExcelReadRange AddHeaders="True" DataTable="[trainerJavaEnterpriseDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="703,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_8" Range="K1:K7" SheetName="Trainer Info &amp; Skillsets" />
+              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[trainerJavaEnterpriseDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,561" sap2010:WorkflowViewState.IdRef="ForEachRow_23">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_88">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_184">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="sd:DataRow">[newRowJavaEnterpriseDT]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="sd:DataRow">[JavaEnterpriseAuditorsDT.NewRow]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_185">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Object">[newRowJavaEnterpriseDT("auditor")]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Object">[row("Java Enterprise")]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_186">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Object">[newRowJavaEnterpriseDT("skillLevel")]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Object">["trainer"]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRowJavaEnterpriseDT]" DataTable="[JavaEnterpriseAuditorsDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_34" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+              </ui:ForEachRow>
               <ui:OutputDataTable DataTable="[JavaEnterpriseAuditorsDT]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="703,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_6" Text="[see]" />
-              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,62" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[see]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,61" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[see]" />
             </Sequence>
           </ActivityAction>
         </ui:ExcelApplicationScope.Body>
       </ui:ExcelApplicationScope>
-      <Sequence sap:VirtualizedContainerService.HintSize="821,2361" sap2010:WorkflowViewState.IdRef="Sequence_32">
+      <Sequence sap:VirtualizedContainerService.HintSize="959,3055" sap2010:WorkflowViewState.IdRef="Sequence_32">
         <Sequence.Variables>
           <Variable x:TypeArguments="sd:DataTable" Name="SalesForceAuditorsDT" />
         </Sequence.Variables>
@@ -1058,17 +1327,18 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,2269" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_5" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
+        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,2963" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_5" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
           <ui:ExcelApplicationScope.Body>
             <ActivityAction x:TypeArguments="ui:WorkbookApplication">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,2160" sap2010:WorkflowViewState.IdRef="Sequence_31">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,2854" sap2010:WorkflowViewState.IdRef="Sequence_31">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="sd:DataTable" Name="PegaAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="JavaEnterpriseAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="BigDataAuditorsDT" />
+                  <Variable x:TypeArguments="sd:DataTable" Name="trainerBigDataDT" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1092,13 +1362,13 @@
                     <InArgument x:TypeArguments="x:Int32">2</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1605" sap2010:WorkflowViewState.IdRef="ForEachRow_7">
+                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1600" sap2010:WorkflowViewState.IdRef="ForEachRow_7">
                   <ui:ForEachRow.Body>
                     <ActivityAction x:TypeArguments="sd:DataRow">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1457" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1453" sap2010:WorkflowViewState.IdRef="Sequence_30">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd1:Color" Name="v" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowJavaDT" />
@@ -1107,7 +1377,6 @@
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowSalesForceDT" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowPegaDT" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowJavaEnterpriseDT" />
-                          <Variable x:TypeArguments="sd:DataRow" Name="newRowBigDataDT" />
                         </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1123,7 +1392,7 @@
                             <InArgument x:TypeArguments="sd:DataRow">[BigDataAuditorsDT.NewRow]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_13">
+                        <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_13">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_28">
                               <sap:WorkflowViewStateService.ViewState>
@@ -1169,7 +1438,7 @@
                             </Assign>
                           </If.Else>
                         </If>
-                        <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_14">
+                        <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_14">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_29">
                               <sap:WorkflowViewStateService.ViewState>
@@ -1219,14 +1488,56 @@
                     </ActivityAction>
                   </ui:ForEachRow.Body>
                 </ui:ForEachRow>
+                <ui:ExcelReadRange AddHeaders="True" DataTable="[trainerBigDataDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="703,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_9" Range="L1:L5" SheetName="Trainer Info &amp; Skillsets" />
+                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[trainerBigDataDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,561" sap2010:WorkflowViewState.IdRef="ForEachRow_24">
+                  <ui:ForEachRow.Body>
+                    <ActivityAction x:TypeArguments="sd:DataRow">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_89">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_187">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="sd:DataRow">[newRowBigDataDT]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="sd:DataRow">[BigDataAuditorsDT.NewRow]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_188">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Object">[newRowBigDataDT("auditor")]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Object">[row("Big Data")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_189">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Object">[newRowBigDataDT("skillLevel")]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Object">["trainer"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRowBigDataDT]" DataTable="[BigDataAuditorsDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_35" />
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ForEachRow.Body>
+                </ui:ForEachRow>
                 <ui:OutputDataTable DataTable="[BigDataAuditorsDT]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="703,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_7" Text="[see]" />
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,62" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[see]" />
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,61" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[see]" />
               </Sequence>
             </ActivityAction>
           </ui:ExcelApplicationScope.Body>
         </ui:ExcelApplicationScope>
       </Sequence>
-      <Sequence sap:VirtualizedContainerService.HintSize="821,2361" sap2010:WorkflowViewState.IdRef="Sequence_37">
+      <Sequence sap:VirtualizedContainerService.HintSize="959,3055" sap2010:WorkflowViewState.IdRef="Sequence_37">
         <Sequence.Variables>
           <Variable x:TypeArguments="sd:DataTable" Name="SalesForceAuditorsDT" />
         </Sequence.Variables>
@@ -1235,18 +1546,19 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,2269" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_6" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
+        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,2963" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_6" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
           <ui:ExcelApplicationScope.Body>
             <ActivityAction x:TypeArguments="ui:WorkbookApplication">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,2160" sap2010:WorkflowViewState.IdRef="Sequence_36">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,2854" sap2010:WorkflowViewState.IdRef="Sequence_36">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="sd:DataTable" Name="PegaAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="JavaEnterpriseAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="BigDataAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="AndroidAuditorsDT" />
+                  <Variable x:TypeArguments="sd:DataTable" Name="trainerAndroidDT" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1270,13 +1582,13 @@
                     <InArgument x:TypeArguments="x:Int32">2</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1605" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
+                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1600" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
                   <ui:ForEachRow.Body>
                     <ActivityAction x:TypeArguments="sd:DataRow">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1457" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1453" sap2010:WorkflowViewState.IdRef="Sequence_35">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd1:Color" Name="v" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowJavaDT" />
@@ -1286,7 +1598,6 @@
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowPegaDT" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowJavaEnterpriseDT" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowBigDataDT" />
-                          <Variable x:TypeArguments="sd:DataRow" Name="newRowAndroidDT" />
                         </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1302,7 +1613,7 @@
                             <InArgument x:TypeArguments="sd:DataRow">[AndroidAuditorsDT.NewRow]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_15">
+                        <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_15">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_33">
                               <sap:WorkflowViewStateService.ViewState>
@@ -1348,7 +1659,7 @@
                             </Assign>
                           </If.Else>
                         </If>
-                        <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_16">
+                        <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_16">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_34">
                               <sap:WorkflowViewStateService.ViewState>
@@ -1398,14 +1709,56 @@
                     </ActivityAction>
                   </ui:ForEachRow.Body>
                 </ui:ForEachRow>
+                <ui:ExcelReadRange AddHeaders="True" DataTable="[trainerAndroidDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="703,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_10" Range="M1:M2" SheetName="Trainer Info &amp; Skillsets" />
+                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[trainerAndroidDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,561" sap2010:WorkflowViewState.IdRef="ForEachRow_25">
+                  <ui:ForEachRow.Body>
+                    <ActivityAction x:TypeArguments="sd:DataRow">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_90">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_190">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="sd:DataRow">[newRowAndroidDT]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="sd:DataRow">[AndroidAuditorsDT.NewRow]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_191">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Object">[newRowAndroidDT("auditor")]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Object">[row("Android")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_192">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Object">[newRowAndroidDT("skillLevel")]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Object">["trainer"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRowAndroidDT]" DataTable="[AndroidAuditorsDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_36" />
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ForEachRow.Body>
+                </ui:ForEachRow>
                 <ui:OutputDataTable DataTable="[AndroidAuditorsDT]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="703,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_8" Text="[see]" />
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,62" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[see]" />
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,61" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[see]" />
               </Sequence>
             </ActivityAction>
           </ui:ExcelApplicationScope.Body>
         </ui:ExcelApplicationScope>
       </Sequence>
-      <Sequence sap:VirtualizedContainerService.HintSize="821,2361" sap2010:WorkflowViewState.IdRef="Sequence_42">
+      <Sequence sap:VirtualizedContainerService.HintSize="959,3055" sap2010:WorkflowViewState.IdRef="Sequence_42">
         <Sequence.Variables>
           <Variable x:TypeArguments="sd:DataTable" Name="SalesForceAuditorsDT" />
         </Sequence.Variables>
@@ -1414,19 +1767,20 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,2269" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_7" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
+        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,2963" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_7" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
           <ui:ExcelApplicationScope.Body>
             <ActivityAction x:TypeArguments="ui:WorkbookApplication">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,2160" sap2010:WorkflowViewState.IdRef="Sequence_41">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,2854" sap2010:WorkflowViewState.IdRef="Sequence_41">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="sd:DataTable" Name="PegaAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="JavaEnterpriseAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="BigDataAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="AndroidAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="iOSAuditorsDT" />
+                  <Variable x:TypeArguments="sd:DataTable" Name="traineriOSDT" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1450,13 +1804,13 @@
                     <InArgument x:TypeArguments="x:Int32">2</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1605" sap2010:WorkflowViewState.IdRef="ForEachRow_9">
+                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1600" sap2010:WorkflowViewState.IdRef="ForEachRow_9">
                   <ui:ForEachRow.Body>
                     <ActivityAction x:TypeArguments="sd:DataRow">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1457" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1453" sap2010:WorkflowViewState.IdRef="Sequence_40">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd1:Color" Name="v" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowJavaDT" />
@@ -1467,7 +1821,6 @@
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowJavaEnterpriseDT" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowBigDataDT" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowAndroidDT" />
-                          <Variable x:TypeArguments="sd:DataRow" Name="newRowiOSDT" />
                         </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1483,7 +1836,7 @@
                             <InArgument x:TypeArguments="sd:DataRow">[iOSAuditorsDT.NewRow]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_17">
+                        <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_17">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_38">
                               <sap:WorkflowViewStateService.ViewState>
@@ -1529,7 +1882,7 @@
                             </Assign>
                           </If.Else>
                         </If>
-                        <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_18">
+                        <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_18">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_39">
                               <sap:WorkflowViewStateService.ViewState>
@@ -1579,14 +1932,56 @@
                     </ActivityAction>
                   </ui:ForEachRow.Body>
                 </ui:ForEachRow>
+                <ui:ExcelReadRange AddHeaders="True" DataTable="[traineriOSDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="703,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_11" Range="N1:N3" SheetName="Trainer Info &amp; Skillsets" />
+                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[traineriOSDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,561" sap2010:WorkflowViewState.IdRef="ForEachRow_26">
+                  <ui:ForEachRow.Body>
+                    <ActivityAction x:TypeArguments="sd:DataRow">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_91">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_193">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="sd:DataRow">[newRowiOSDT]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="sd:DataRow">[iOSAuditorsDT.NewRow]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_194">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Object">[newRowiOSDT("auditor")]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Object">[row("iOS")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_195">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Object">[newRowiOSDT("skillLevel")]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Object">["trainer"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRowiOSDT]" DataTable="[iOSAuditorsDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_37" />
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ForEachRow.Body>
+                </ui:ForEachRow>
                 <ui:OutputDataTable DataTable="[iOSAuditorsDT]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="703,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_9" Text="[see]" />
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,62" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="[see]" />
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,61" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="[see]" />
               </Sequence>
             </ActivityAction>
           </ui:ExcelApplicationScope.Body>
         </ui:ExcelApplicationScope>
       </Sequence>
-      <Sequence sap:VirtualizedContainerService.HintSize="821,2361" sap2010:WorkflowViewState.IdRef="Sequence_47">
+      <Sequence sap:VirtualizedContainerService.HintSize="959,3055" sap2010:WorkflowViewState.IdRef="Sequence_47">
         <Sequence.Variables>
           <Variable x:TypeArguments="sd:DataTable" Name="SalesForceAuditorsDT" />
         </Sequence.Variables>
@@ -1595,13 +1990,13 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,2269" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_8" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
+        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,2963" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_8" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
           <ui:ExcelApplicationScope.Body>
             <ActivityAction x:TypeArguments="ui:WorkbookApplication">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,2160" sap2010:WorkflowViewState.IdRef="Sequence_46">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,2854" sap2010:WorkflowViewState.IdRef="Sequence_46">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="sd:DataTable" Name="PegaAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="JavaEnterpriseAuditorsDT" />
@@ -1609,6 +2004,7 @@
                   <Variable x:TypeArguments="sd:DataTable" Name="AndroidAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="iOSAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="UiPathAuditorsDT" />
+                  <Variable x:TypeArguments="sd:DataTable" Name="trainerUiPathDT" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1632,13 +2028,13 @@
                     <InArgument x:TypeArguments="x:Int32">2</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1605" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
+                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1600" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
                   <ui:ForEachRow.Body>
                     <ActivityAction x:TypeArguments="sd:DataRow">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1457" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1453" sap2010:WorkflowViewState.IdRef="Sequence_45">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd1:Color" Name="v" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowJavaDT" />
@@ -1650,7 +2046,6 @@
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowBigDataDT" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowAndroidDT" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowiOSDT" />
-                          <Variable x:TypeArguments="sd:DataRow" Name="newRowUiPathDT" />
                         </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1666,7 +2061,7 @@
                             <InArgument x:TypeArguments="sd:DataRow">[UiPathAuditorsDT.NewRow]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_19">
+                        <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_19">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_43">
                               <sap:WorkflowViewStateService.ViewState>
@@ -1712,7 +2107,7 @@
                             </Assign>
                           </If.Else>
                         </If>
-                        <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_20">
+                        <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_20">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_44">
                               <sap:WorkflowViewStateService.ViewState>
@@ -1762,14 +2157,56 @@
                     </ActivityAction>
                   </ui:ForEachRow.Body>
                 </ui:ForEachRow>
+                <ui:ExcelReadRange AddHeaders="True" DataTable="[trainerUiPathDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="703,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_12" Range="O1:O3" SheetName="Trainer Info &amp; Skillsets" />
+                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[trainerUiPathDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,561" sap2010:WorkflowViewState.IdRef="ForEachRow_27">
+                  <ui:ForEachRow.Body>
+                    <ActivityAction x:TypeArguments="sd:DataRow">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_92">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_196">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="sd:DataRow">[newRowUiPathDT]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="sd:DataRow">[UiPathAuditorsDT.NewRow]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_197">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Object">[newRowUiPathDT("auditor")]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Object">[row("UIPath")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_198">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Object">[newRowUiPathDT("skillLevel")]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Object">["trainer"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRowUiPathDT]" DataTable="[UiPathAuditorsDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_38" />
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ForEachRow.Body>
+                </ui:ForEachRow>
                 <ui:OutputDataTable DataTable="[UiPathAuditorsDT]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="703,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_10" Text="[see]" />
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,62" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[see]" />
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,61" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[see]" />
               </Sequence>
             </ActivityAction>
           </ui:ExcelApplicationScope.Body>
         </ui:ExcelApplicationScope>
       </Sequence>
-      <Sequence sap:VirtualizedContainerService.HintSize="821,2361" sap2010:WorkflowViewState.IdRef="Sequence_52">
+      <Sequence sap:VirtualizedContainerService.HintSize="959,3055" sap2010:WorkflowViewState.IdRef="Sequence_52">
         <Sequence.Variables>
           <Variable x:TypeArguments="sd:DataTable" Name="SalesForceAuditorsDT" />
         </Sequence.Variables>
@@ -1778,13 +2215,13 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,2269" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_9" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
+        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,2963" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_9" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
           <ui:ExcelApplicationScope.Body>
             <ActivityAction x:TypeArguments="ui:WorkbookApplication">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,2160" sap2010:WorkflowViewState.IdRef="Sequence_51">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,2854" sap2010:WorkflowViewState.IdRef="Sequence_51">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="sd:DataTable" Name="PegaAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="JavaEnterpriseAuditorsDT" />
@@ -1793,6 +2230,7 @@
                   <Variable x:TypeArguments="sd:DataTable" Name="iOSAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="UiPathAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="DevOpsAuditorsDT" />
+                  <Variable x:TypeArguments="sd:DataTable" Name="trainerDevOpsDT" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1816,13 +2254,13 @@
                     <InArgument x:TypeArguments="x:Int32">2</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1605" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
+                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1600" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
                   <ui:ForEachRow.Body>
                     <ActivityAction x:TypeArguments="sd:DataRow">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1457" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1453" sap2010:WorkflowViewState.IdRef="Sequence_50">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd1:Color" Name="v" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowJavaDT" />
@@ -1835,7 +2273,6 @@
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowAndroidDT" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowiOSDT" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowUiPathDT" />
-                          <Variable x:TypeArguments="sd:DataRow" Name="newRowDevOpsDT" />
                         </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1851,7 +2288,7 @@
                             <InArgument x:TypeArguments="sd:DataRow">[DevOpsAuditorsDT.NewRow]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_21">
+                        <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_21">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_48">
                               <sap:WorkflowViewStateService.ViewState>
@@ -1897,7 +2334,7 @@
                             </Assign>
                           </If.Else>
                         </If>
-                        <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_22">
+                        <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_22">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_49">
                               <sap:WorkflowViewStateService.ViewState>
@@ -1947,14 +2384,56 @@
                     </ActivityAction>
                   </ui:ForEachRow.Body>
                 </ui:ForEachRow>
+                <ui:ExcelReadRange AddHeaders="True" DataTable="[trainerDevOpsDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="703,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_13" Range="S1:S2" SheetName="Trainer Info &amp; Skillsets" />
+                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[trainerDevOpsDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,561" sap2010:WorkflowViewState.IdRef="ForEachRow_28">
+                  <ui:ForEachRow.Body>
+                    <ActivityAction x:TypeArguments="sd:DataRow">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_93">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_199">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="sd:DataRow">[newRowDevOpsDT]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="sd:DataRow">[DevOpsAuditorsDT.NewRow]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_200">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Object">[newRowDevOpsDT("auditor")]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Object">[row("DevOps")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_201">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Object">[newRowDevOpsDT("skillLevel")]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Object">["trainer"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRowDevOpsDT]" DataTable="[DevOpsAuditorsDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_39" />
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ForEachRow.Body>
+                </ui:ForEachRow>
                 <ui:OutputDataTable DataTable="[DevOpsAuditorsDT]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="703,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_11" Text="[see]" />
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,62" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[see]" />
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,61" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[see]" />
               </Sequence>
             </ActivityAction>
           </ui:ExcelApplicationScope.Body>
         </ui:ExcelApplicationScope>
       </Sequence>
-      <Sequence sap:VirtualizedContainerService.HintSize="821,2361" sap2010:WorkflowViewState.IdRef="Sequence_57">
+      <Sequence sap:VirtualizedContainerService.HintSize="959,3055" sap2010:WorkflowViewState.IdRef="Sequence_57">
         <Sequence.Variables>
           <Variable x:TypeArguments="sd:DataTable" Name="SalesForceAuditorsDT" />
         </Sequence.Variables>
@@ -1963,13 +2442,13 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,2269" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_10" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
+        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,2963" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_10" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
           <ui:ExcelApplicationScope.Body>
             <ActivityAction x:TypeArguments="ui:WorkbookApplication">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,2160" sap2010:WorkflowViewState.IdRef="Sequence_56">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,2854" sap2010:WorkflowViewState.IdRef="Sequence_56">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="sd:DataTable" Name="PegaAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="JavaEnterpriseAuditorsDT" />
@@ -1979,6 +2458,7 @@
                   <Variable x:TypeArguments="sd:DataTable" Name="UiPathAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="DevOpsAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="PythonAuditorsDT" />
+                  <Variable x:TypeArguments="sd:DataTable" Name="trainerPythonDT" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -2002,13 +2482,13 @@
                     <InArgument x:TypeArguments="x:Int32">2</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1605" sap2010:WorkflowViewState.IdRef="ForEachRow_12">
+                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1600" sap2010:WorkflowViewState.IdRef="ForEachRow_12">
                   <ui:ForEachRow.Body>
                     <ActivityAction x:TypeArguments="sd:DataRow">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1457" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1453" sap2010:WorkflowViewState.IdRef="Sequence_55">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd1:Color" Name="v" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowJavaDT" />
@@ -2022,7 +2502,6 @@
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowiOSDT" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowUiPathDT" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowDevOpsDT" />
-                          <Variable x:TypeArguments="sd:DataRow" Name="newRowPythonDT" />
                         </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -2038,7 +2517,7 @@
                             <InArgument x:TypeArguments="sd:DataRow">[PythonAuditorsDT.NewRow]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_23">
+                        <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_23">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_53">
                               <sap:WorkflowViewStateService.ViewState>
@@ -2084,7 +2563,7 @@
                             </Assign>
                           </If.Else>
                         </If>
-                        <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_24">
+                        <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_24">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_54">
                               <sap:WorkflowViewStateService.ViewState>
@@ -2134,14 +2613,56 @@
                     </ActivityAction>
                   </ui:ForEachRow.Body>
                 </ui:ForEachRow>
+                <ui:ExcelReadRange AddHeaders="True" DataTable="[trainerPythonDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="703,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_14" Range="R1:R2" SheetName="Trainer Info &amp; Skillsets" />
+                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[trainerPythonDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,561" sap2010:WorkflowViewState.IdRef="ForEachRow_29">
+                  <ui:ForEachRow.Body>
+                    <ActivityAction x:TypeArguments="sd:DataRow">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_94">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_202">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="sd:DataRow">[newRowPythonDT]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="sd:DataRow">[PythonAuditorsDT.NewRow]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_203">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Object">[newRowPythonDT("auditor")]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Object">[row("Python")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_204">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Object">[newRowPythonDT("skillLevel")]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Object">["trainer"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRowPythonDT]" DataTable="[PythonAuditorsDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_40" />
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ForEachRow.Body>
+                </ui:ForEachRow>
                 <ui:OutputDataTable DataTable="[PythonAuditorsDT]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="703,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_12" Text="[see]" />
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,62" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[see]" />
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,61" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[see]" />
               </Sequence>
             </ActivityAction>
           </ui:ExcelApplicationScope.Body>
         </ui:ExcelApplicationScope>
       </Sequence>
-      <Sequence sap:VirtualizedContainerService.HintSize="821,2361" sap2010:WorkflowViewState.IdRef="Sequence_62">
+      <Sequence sap:VirtualizedContainerService.HintSize="959,3656" sap2010:WorkflowViewState.IdRef="Sequence_62">
         <Sequence.Variables>
           <Variable x:TypeArguments="sd:DataTable" Name="SalesForceAuditorsDT" />
         </Sequence.Variables>
@@ -2150,13 +2671,13 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,2269" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_11" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
+        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,3564" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_11" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
           <ui:ExcelApplicationScope.Body>
             <ActivityAction x:TypeArguments="ui:WorkbookApplication">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,2160" sap2010:WorkflowViewState.IdRef="Sequence_61">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,3455" sap2010:WorkflowViewState.IdRef="Sequence_61">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="sd:DataTable" Name="PegaAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="JavaEnterpriseAuditorsDT" />
@@ -2167,6 +2688,7 @@
                   <Variable x:TypeArguments="sd:DataTable" Name="DevOpsAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="PythonAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="MuleSoftAuditorsDT" />
+                  <Variable x:TypeArguments="sd:DataTable" Name="trainerMuleSoftDT" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -2190,13 +2712,13 @@
                     <InArgument x:TypeArguments="x:Int32">2</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1605" sap2010:WorkflowViewState.IdRef="ForEachRow_13">
+                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,2201" sap2010:WorkflowViewState.IdRef="ForEachRow_13">
                   <ui:ForEachRow.Body>
                     <ActivityAction x:TypeArguments="sd:DataRow">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1457" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,2054" sap2010:WorkflowViewState.IdRef="Sequence_60">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd1:Color" Name="v" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowJavaDT" />
@@ -2211,7 +2733,6 @@
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowUiPathDT" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowDevOpsDT" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowPythonDT" />
-                          <Variable x:TypeArguments="sd:DataRow" Name="newRowMuleSoftDT" />
                         </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -2227,7 +2748,7 @@
                             <InArgument x:TypeArguments="sd:DataRow">[MuleSoftAuditorsDT.NewRow]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_25">
+                        <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_25">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_58">
                               <sap:WorkflowViewStateService.ViewState>
@@ -2273,7 +2794,7 @@
                             </Assign>
                           </If.Else>
                         </If>
-                        <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_26">
+                        <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_26">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_59">
                               <sap:WorkflowViewStateService.ViewState>
@@ -2319,33 +2840,118 @@
                             </Assign>
                           </If.Else>
                         </If>
+                        <If Condition="[colorMatch = intermediate]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_33">
+                          <If.Then>
+                            <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_98">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_211">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Object">[newRowMuleSoftDT("Auditor")]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Object">[row("QC Auditors")]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_212">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Object">[newRowMuleSoftDT("skillLevel")]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Object">["intermediate"]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRowMuleSoftDT]" DataTable="[MuleSoftAuditorsDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_43" />
+                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_213">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Int32">[counterDproficient]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Int32">[counterDproficient + 1]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_214">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Int32">[counterDproficient]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Int32">[counterDproficient + 1]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ForEachRow.Body>
+                </ui:ForEachRow>
+                <ui:ExcelReadRange AddHeaders="True" DataTable="[trainerMuleSoftDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="703,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_15" Range="Q1:Q2" SheetName="Trainer Info &amp; Skillsets" />
+                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[trainerMuleSoftDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,561" sap2010:WorkflowViewState.IdRef="ForEachRow_30">
+                  <ui:ForEachRow.Body>
+                    <ActivityAction x:TypeArguments="sd:DataRow">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_95">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_205">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="sd:DataRow">[newRowMuleSoftDT]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="sd:DataRow">[MuleSoftAuditorsDT.NewRow]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_206">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Object">[newRowMuleSoftDT("auditor")]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Object">[row("Mulesoft")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_207">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Object">[newRowMuleSoftDT("skillLevel")]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Object">["trainer"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRowMuleSoftDT]" DataTable="[MuleSoftAuditorsDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_41" />
                       </Sequence>
                     </ActivityAction>
                   </ui:ForEachRow.Body>
                 </ui:ForEachRow>
                 <ui:OutputDataTable DataTable="[MuleSoftAuditorsDT]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="703,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_13" Text="[see]" />
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,62" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[see]" />
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,61" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[see]" />
               </Sequence>
             </ActivityAction>
           </ui:ExcelApplicationScope.Body>
         </ui:ExcelApplicationScope>
       </Sequence>
-      <Sequence sap:VirtualizedContainerService.HintSize="821,2361" sap2010:WorkflowViewState.IdRef="Sequence_67">
-        <Sequence.Variables>
-          <Variable x:TypeArguments="sd:DataTable" Name="SalesForceAuditorsDT" />
-        </Sequence.Variables>
+      <Sequence sap:VirtualizedContainerService.HintSize="959,3055" sap2010:WorkflowViewState.IdRef="Sequence_67">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,2269" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_12" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
+        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779,2963" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_12" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
           <ui:ExcelApplicationScope.Body>
             <ActivityAction x:TypeArguments="ui:WorkbookApplication">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,2160" sap2010:WorkflowViewState.IdRef="Sequence_66">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="745,2854" sap2010:WorkflowViewState.IdRef="Sequence_66">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="sd:DataTable" Name="PegaAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="JavaEnterpriseAuditorsDT" />
@@ -2356,7 +2962,7 @@
                   <Variable x:TypeArguments="sd:DataTable" Name="DevOpsAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="PythonAuditorsDT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="MuleSoftAuditorsDT" />
-                  <Variable x:TypeArguments="sd:DataTable" Name="ServiceNowAuditorsDT" />
+                  <Variable x:TypeArguments="sd:DataTable" Name="trainerServiceNowDT" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -2380,13 +2986,13 @@
                     <InArgument x:TypeArguments="x:Int32">2</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1605" sap2010:WorkflowViewState.IdRef="ForEachRow_14">
+                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[skillSetDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,1600" sap2010:WorkflowViewState.IdRef="ForEachRow_14">
                   <ui:ForEachRow.Body>
                     <ActivityAction x:TypeArguments="sd:DataRow">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1457" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,1453" sap2010:WorkflowViewState.IdRef="Sequence_65">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd1:Color" Name="v" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowJavaDT" />
@@ -2402,7 +3008,6 @@
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowDevOpsDT" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowPythonDT" />
                           <Variable x:TypeArguments="sd:DataRow" Name="newRowMuleSoftDT" />
-                          <Variable x:TypeArguments="sd:DataRow" Name="newRowServiceNowDT" />
                         </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -2418,7 +3023,7 @@
                             <InArgument x:TypeArguments="sd:DataRow">[ServiceNowAuditorsDT.NewRow]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_27">
+                        <If Condition="[colorMatch = expert]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_27">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_63">
                               <sap:WorkflowViewStateService.ViewState>
@@ -2464,7 +3069,7 @@
                             </Assign>
                           </If.Else>
                         </If>
-                        <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,563" sap2010:WorkflowViewState.IdRef="If_28">
+                        <If Condition="[colorMatch = proficient]" sap:VirtualizedContainerService.HintSize="611,561" sap2010:WorkflowViewState.IdRef="If_28">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_64">
                               <sap:WorkflowViewStateService.ViewState>
@@ -2514,14 +3119,323 @@
                     </ActivityAction>
                   </ui:ForEachRow.Body>
                 </ui:ForEachRow>
+                <ui:ExcelReadRange AddHeaders="True" DataTable="[trainerServiceNowDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="703,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_16" Range="P1:P2" SheetName="Trainer Info &amp; Skillsets" />
+                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[trainerServiceNowDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="703,561" sap2010:WorkflowViewState.IdRef="ForEachRow_31">
+                  <ui:ForEachRow.Body>
+                    <ActivityAction x:TypeArguments="sd:DataRow">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_96">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_208">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="sd:DataRow">[newRowServiceNowDT]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="sd:DataRow">[ServiceNowAuditorsDT.NewRow]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_209">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Object">[newRowServiceNowDT("auditor")]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Object">[row("ServiceNow")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_210">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Object">[newRowServiceNowDT("skillLevel")]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Object">["trainer"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRowServiceNowDT]" DataTable="[ServiceNowAuditorsDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_42" />
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ForEachRow.Body>
+                </ui:ForEachRow>
                 <ui:OutputDataTable DataTable="[ServiceNowAuditorsDT]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="703,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_14" Text="[see]" />
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,62" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="[see]" />
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="703,61" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="[see]" />
               </Sequence>
             </ActivityAction>
           </ui:ExcelApplicationScope.Body>
         </ui:ExcelApplicationScope>
       </Sequence>
-      <If sap:VirtualizedContainerService.HintSize="821,210" sap2010:WorkflowViewState.IdRef="If_29" />
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="959,3588" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="923,3510" sap2010:WorkflowViewState.IdRef="Sequence_97">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="checkBatches" sap:VirtualizedContainerService.HintSize="881,3418" sap2010:WorkflowViewState.IdRef="Sequence_71">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="839,3326" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_13" InstanceCachePeriod="3000" WorkbookPath="C:\Users\roder\OneDrive\Documents\P3\Dummy QC Schedule Copy.xlsx">
+                <ui:ExcelApplicationScope.Body>
+                  <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="805,3217" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="sd:DataTable" Name="batchesCol" />
+                        <Variable x:TypeArguments="sd:DataTable" Name="newColDT" />
+                        <Variable x:TypeArguments="x:Int32" Name="auditorCounter" />
+                        <Variable x:TypeArguments="x:Int32" Name="writeCounter" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:ExcelReadRange AddHeaders="True" DataTable="[batchesCol]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="763,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="B1:B35" SheetName="Dummy Schedule - Dec 6" />
+                      <ui:OutputDataTable DataTable="[batchesCol]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="763,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_15" Text="[see]" />
+                      <ui:BuildDataTable DataTable="[newColDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="763,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_15" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;skillSet&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+                      <Assign sap:VirtualizedContainerService.HintSize="763,60" sap2010:WorkflowViewState.IdRef="Assign_155">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[auditorCounter]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="763,60" sap2010:WorkflowViewState.IdRef="Assign_164">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[writeCounter]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">3</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[batchesCol]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="763,2665" sap2010:WorkflowViewState.IdRef="ForEachRow_16">
+                        <ui:ForEachRow.Body>
+                          <ActivityAction x:TypeArguments="sd:DataRow">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="713,2518" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:String" Name="rowValue" />
+                                <Variable x:TypeArguments="x:String" Name="n" />
+                                <Variable x:TypeArguments="sd:DataRow" Name="newRowValue" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If Condition="[row(&quot;Batches&quot;).ToString.Contains(&quot;ServiceNow&quot;)]" sap:VirtualizedContainerService.HintSize="671,1056" sap2010:WorkflowViewState.IdRef="If_30">
+                                <If.Then>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="396,909" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                                    <Sequence.Variables>
+                                      <Variable x:TypeArguments="x:Boolean" Name="check" />
+                                    </Sequence.Variables>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="354,60" sap2010:WorkflowViewState.IdRef="Assign_158">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Boolean">[check]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <Assign sap:VirtualizedContainerService.HintSize="354,60" sap2010:WorkflowViewState.IdRef="Assign_157">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[auditorCounter]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">[auditorCounter + 1]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[ServiceNowAuditorsDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="354,299" sap2010:WorkflowViewState.IdRef="ForEachRow_17">
+                                      <ui:ForEachRow.Body>
+                                        <ActivityAction x:TypeArguments="sd:DataRow">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_165">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[auditor]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">[row("Auditor").ToString]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:ForEachRow.Body>
+                                    </ui:ForEachRow>
+                                    <ui:ExcelWriteCell Cell="[&quot;G&quot; + writeCounter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="354,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Dummy Schedule - Dec 6" Text="[auditor.ToString]" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="354,60" sap2010:WorkflowViewState.IdRef="Assign_167">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[writeCounter]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">[writeCounter + 1]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                                      <ui:CommentOut.Body>
+                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="382,509" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:InterruptibleWhile Condition="[check = False]" DisplayName="While" sap:VirtualizedContainerService.HintSize="340,417" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                                            <ui:InterruptibleWhile.Body>
+                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_159">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="x:Boolean">[check]</OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_156">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="x:String">[auditor]</OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="x:Object">[ServiceNowAuditorsDT("auditors").Item(auditCounter)]</InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                              </Sequence>
+                                            </ui:InterruptibleWhile.Body>
+                                          </ui:InterruptibleWhile>
+                                        </Sequence>
+                                      </ui:CommentOut.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:CommentOut>
+                                  </Sequence>
+                                </If.Then>
+                              </If>
+                              <If Condition="[row(&quot;Batches&quot;).ToString.Contains(&quot;Java&quot;)]" sap:VirtualizedContainerService.HintSize="671,1330" sap2010:WorkflowViewState.IdRef="If_31">
+                                <If.Then>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="526,1183" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                                    <Sequence.Variables>
+                                      <Variable x:TypeArguments="x:Boolean" Name="check" />
+                                    </Sequence.Variables>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_160">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Boolean">[check]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="484,417" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+                                      <ui:InterruptibleWhile.Body>
+                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_162">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">[auditor]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">[JavaAuditorsDT.Rows(auditorCounter).ToString]</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                          <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_163">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:Boolean">[check]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                        </Sequence>
+                                      </ui:InterruptibleWhile.Body>
+                                      <ui:InterruptibleWhile.Condition>
+                                        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="check = False" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
+                                      </ui:InterruptibleWhile.Condition>
+                                    </ui:InterruptibleWhile>
+                                    <ui:ExcelWriteCell Cell="[&quot;G&quot; + writeCounter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="484,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Dummy Schedule - Dec 6" Text="[auditor]" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_168">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[writeCounter]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">[writeCounter + 1]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_161">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[auditorCounter]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">[auditorCounter + 1]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <If Condition="[auditorCounter &gt;= 7]" sap:VirtualizedContainerService.HintSize="484,207" sap2010:WorkflowViewState.IdRef="If_32">
+                                      <If.Then>
+                                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_166">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:Int32">[auditorCounter]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </If.Then>
+                                    </If>
+                                  </Sequence>
+                                </If.Then>
+                              </If>
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:ForEachRow.Body>
+                      </ui:ForEachRow>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ExcelApplicationScope.Body>
+              </ui:ExcelApplicationScope>
+            </Sequence>
+          </Sequence>
+        </ui:CommentOut.Body>
+      </ui:CommentOut>
     </Sequence>
   </Sequence>
 </Activity>
