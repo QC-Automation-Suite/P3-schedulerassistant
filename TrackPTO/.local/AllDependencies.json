@@ -7571,15 +7571,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hahme\\.nuget\\packages\\": {}
+    "C:\\Users\\Owner\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "TrackPTO",
       "projectName": "TrackPTO",
-      "projectPath": "C:\\Users\\hahme\\Documents\\UiPath\\TrackPTO\\.local",
-      "packagesPath": "C:\\Users\\hahme\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hahme\\Documents\\UiPath\\TrackPTO\\.local"
+      "projectPath": "M:\\Repository\\Contract&Jobs\\Revature\\Projects\\Project 3\\QC\\SchedulerAssistant\\P3-schedulerassistant\\TrackPTO\\.local",
+      "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
+      "outputPath": "M:\\Repository\\Contract&Jobs\\Revature\\Projects\\Project 3\\QC\\SchedulerAssistant\\P3-schedulerassistant\\TrackPTO\\.local"
     },
     "frameworks": {
       "net461": {
@@ -7605,7 +7605,7 @@
             "version": "[21.10.3, 21.10.3]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\hahme\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {
