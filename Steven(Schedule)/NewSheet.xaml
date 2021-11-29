@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>962.4,444</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>964,444</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Scheduler_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="31">
@@ -168,18 +168,18 @@
         </ui:ForEach.Body>
       </ui:ForEach>
     </Sequence>
-    <Sequence DisplayName="Writes and Copies All Data from Column A-F" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+    <Sequence DisplayName="Writes and Copies All Data from Column A-F" sap:VirtualizedContainerService.HintSize="533.6,6640" sap2010:WorkflowViewState.IdRef="Sequence_10">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadRange AddHeaders="False" DataTable="[scheduleSheet]" DisplayName="Reads Columns A-E" sap:VirtualizedContainerService.HintSize="408.8,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" PreserveFormat="True" Range="A2:E35" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="408.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Read Range from sheet of previous week&quot;]" />
-      <ui:WriteRange AddHeaders="False" DataTable="[scheduleSheet]" DisplayName="Writes Columns A-E to new sheet" sap:VirtualizedContainerService.HintSize="408.8,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[CurrWeek.Month.ToString + &quot;-&quot; + CurrWeek.Day.ToString + &quot;-&quot; + CurrWeek.Year.ToString.Substring(2)]" StartingCell="A2" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="408.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Write Output to sheet for current week&quot;]" />
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[i]" DataTable="[scheduleSheet]" DisplayName="Reads Values in F Column" sap:VirtualizedContainerService.HintSize="408.8,457.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ReadRange AddHeaders="False" DataTable="[scheduleSheet]" DisplayName="Reads Columns A-E" sap:VirtualizedContainerService.HintSize="492,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" PreserveFormat="True" Range="A2:E35" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="492,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Read Range from sheet of previous week&quot;]" />
+      <ui:WriteRange AddHeaders="False" DataTable="[scheduleSheet]" DisplayName="Writes Columns A-E to new sheet" sap:VirtualizedContainerService.HintSize="492,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[CurrWeek.Month.ToString + &quot;-&quot; + CurrWeek.Day.ToString + &quot;-&quot; + CurrWeek.Year.ToString.Substring(2)]" StartingCell="A2" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="492,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Write Output to sheet for current week&quot;]" />
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[i]" DataTable="[scheduleSheet]" DisplayName="Reads Values in F Column" sap:VirtualizedContainerService.HintSize="492,457.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -200,7 +200,155 @@
           </ActivityAction>
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="408.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Write Batch size to new sheet&quot;]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="492,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Write Batch size to new sheet&quot;]" />
+      <Sequence DisplayName="Reads Trainers, Auditors, and PTO" sap:VirtualizedContainerService.HintSize="492,5367.2" sap2010:WorkflowViewState.IdRef="Sequence_32">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="sd:DataTable" Name="Trainers" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Sequence DisplayName="Reads Text in Excel File" sap:VirtualizedContainerService.HintSize="450.4,2040.8" sap2010:WorkflowViewState.IdRef="Sequence_26">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="sd:DataTable" Name="QC_Auditor" />
+            <Variable x:TypeArguments="sd:DataTable" Name="PTO" />
+            <Variable x:TypeArguments="x:String" Name="Total_Batch" />
+            <Variable x:TypeArguments="x:String" Name="Avg_Batch" />
+            <Variable x:TypeArguments="x:String" Name="Trainer_Name" />
+            <Variable x:TypeArguments="x:String" Name="Trainer_Available" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ReadRange AddHeaders="False" DataTable="[Trainers]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_3" Range="C36:G36" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+          <ui:ReadRange AddHeaders="False" DataTable="[QC_Auditor]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_4" Range="C37:C43" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+          <ui:ReadRange AddHeaders="False" DataTable="[PTO]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_5" Range="J39:J41" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+          <ui:ReadCell Cell="B37" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadCell_1" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx">
+            <ui:ReadCell.Result>
+              <OutArgument x:TypeArguments="x:String">[Total_Batch]</OutArgument>
+            </ui:ReadCell.Result>
+          </ui:ReadCell>
+          <ui:ReadCell Cell="B39" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadCell_2" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx">
+            <ui:ReadCell.Result>
+              <OutArgument x:TypeArguments="x:String">[Avg_Batch]</OutArgument>
+            </ui:ReadCell.Result>
+          </ui:ReadCell>
+          <ui:ReadCell Cell="B44" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadCell_3" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx">
+            <ui:ReadCell.Result>
+              <OutArgument x:TypeArguments="x:String">[Trainer_Name]</OutArgument>
+            </ui:ReadCell.Result>
+          </ui:ReadCell>
+          <ui:ReadCell Cell="C44" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadCell_4" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx">
+            <ui:ReadCell.Result>
+              <OutArgument x:TypeArguments="x:String">[Trainer_Available]</OutArgument>
+            </ui:ReadCell.Result>
+          </ui:ReadCell>
+          <ui:WriteRange AddHeaders="False" DataTable="[Trainers]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="[CurrWeek.Month.ToString + &quot;-&quot; + CurrWeek.Day.ToString + &quot;-&quot; + CurrWeek.Year.ToString.Substring(2)]" StartingCell="C36:G36" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+          <ui:WriteRange AddHeaders="False" DataTable="[QC_Auditor]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="[CurrWeek.Month.ToString + &quot;-&quot; + CurrWeek.Day.ToString + &quot;-&quot; + CurrWeek.Year.ToString.Substring(2)]" StartingCell="C37:C43" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+          <ui:WriteRange AddHeaders="False" DataTable="[PTO]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="[CurrWeek.Month.ToString + &quot;-&quot; + CurrWeek.Day.ToString + &quot;-&quot; + CurrWeek.Year.ToString.Substring(2)]" StartingCell="J39:J41" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+          <ui:WriteCell Cell="B37" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_6" SheetName="[CurrWeek.Month.ToString + &quot;-&quot; + CurrWeek.Day.ToString + &quot;-&quot; + CurrWeek.Year.ToString.Substring(2)]" Text="[Total_Batch]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+          <ui:WriteCell Cell="B39" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_7" SheetName="[CurrWeek.Month.ToString + &quot;-&quot; + CurrWeek.Day.ToString + &quot;-&quot; + CurrWeek.Year.ToString.Substring(2)]" Text="[Avg_Batch]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+          <ui:WriteCell Cell="B44" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_8" SheetName="[CurrWeek.Month.ToString + &quot;-&quot; + CurrWeek.Day.ToString + &quot;-&quot; + CurrWeek.Year.ToString.Substring(2)]" Text="[Trainer_Name]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+          <ui:WriteCell Cell="C44" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_9" SheetName="[CurrWeek.Month.ToString + &quot;-&quot; + CurrWeek.Day.ToString + &quot;-&quot; + CurrWeek.Year.ToString.Substring(2)]" Text="[Trainer_Available]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+        </Sequence>
+        <Sequence DisplayName="Reads Formulas in Excel File" sap:VirtualizedContainerService.HintSize="450.4,620.8" sap2010:WorkflowViewState.IdRef="Sequence_27">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="Assoc_Sum" />
+            <Variable x:TypeArguments="x:String" Name="Assoc_Per_Auditor" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ReadCellFormula Cell="B38" DisplayName="Read Cell Formula" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadCellFormula_4" Result="[Assoc_Sum]" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+          <ui:ReadCellFormula Cell="B40" DisplayName="Read Cell Formula" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadCellFormula_5" Result="[Assoc_Per_Auditor]" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+          <ui:WriteCell Cell="B38" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_10" SheetName="[CurrWeek.Month.ToString + &quot;-&quot; + CurrWeek.Day.ToString + &quot;-&quot; + CurrWeek.Year.ToString.Substring(2)]" Text="[&quot;=&quot;+Assoc_Sum]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+          <ui:WriteCell Cell="B40" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_11" SheetName="[CurrWeek.Month.ToString + &quot;-&quot; + CurrWeek.Day.ToString + &quot;-&quot; + CurrWeek.Year.ToString.Substring(2)]" Text="[&quot;=&quot;+Assoc_Per_Auditor]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+        </Sequence>
+        <Sequence DisplayName="Read Auditor Table" sap:VirtualizedContainerService.HintSize="450.4,1530.4" sap2010:WorkflowViewState.IdRef="Sequence_29">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="sd:DataTable" Name="Audito_Table" />
+            <Variable x:TypeArguments="x:Int32" Name="c" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ReadRange AddHeaders="False" DataTable="[Audito_Table]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="408.8,88" sap2010:WorkflowViewState.IdRef="ReadRange_6" Range="C37:C43" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[c]" DataTable="[Audito_Table]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="408.8,1309.6" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+            <ui:ForEachRow.Body>
+              <ActivityAction x:TypeArguments="sd:DataRow">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,1188.8" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="AuditorQCNum" />
+                    <Variable x:TypeArguments="x:String" Name="Avg_Wk" />
+                    <Variable x:TypeArguments="x:String" Name="Tr" />
+                    <Variable x:TypeArguments="x:String" Name="Adj_Tr" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ReadCellFormula Cell="[&quot;D&quot;+Cstr(c+37)]" DisplayName="Read Cell Formula" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadCellFormula_6" Result="[AuditorQCNum]" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+                  <ui:ReadCellFormula Cell="[&quot;E&quot;+Cstr(c+37)]" DisplayName="Read Cell Formula" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadCellFormula_7" Result="[Avg_Wk]" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+                  <ui:ReadCellFormula Cell="[&quot;F&quot;+Cstr(c+37)]" DisplayName="Read Cell Formula" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadCellFormula_8" Result="[Tr]" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+                  <ui:ReadCellFormula Cell="[&quot;G&quot;+Cstr(c+37)]" DisplayName="Read Cell Formula" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadCellFormula_9" Result="[Adj_Tr]" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+                  <ui:WriteCell Cell="[&quot;D&quot;+Cstr(c+37)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_12" SheetName="[CurrWeek.Month.ToString + &quot;-&quot; + CurrWeek.Day.ToString + &quot;-&quot; + CurrWeek.Year.ToString.Substring(2)]" Text="[&quot;=&quot;+AuditorQCNum]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+                  <ui:WriteCell Cell="[&quot;E&quot;+Cstr(c+37)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_13" SheetName="[CurrWeek.Month.ToString + &quot;-&quot; + CurrWeek.Day.ToString + &quot;-&quot; + CurrWeek.Year.ToString.Substring(2)]" Text="[&quot;=&quot;+Avg_Wk]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+                  <ui:WriteCell Cell="[&quot;F&quot;+Cstr(c+37)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_14" SheetName="[CurrWeek.Month.ToString + &quot;-&quot; + CurrWeek.Day.ToString + &quot;-&quot; + CurrWeek.Year.ToString.Substring(2)]" Text="[&quot;=&quot;+Tr]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+                  <ui:WriteCell Cell="[&quot;G&quot;+Cstr(c+37)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_15" SheetName="[CurrWeek.Month.ToString + &quot;-&quot; + CurrWeek.Day.ToString + &quot;-&quot; + CurrWeek.Year.ToString.Substring(2)]" Text="[&quot;=&quot;+Adj_Tr]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEachRow.Body>
+          </ui:ForEachRow>
+        </Sequence>
+        <Sequence DisplayName="Read Trainer Table" sap:VirtualizedContainerService.HintSize="450.4,962.4" sap2010:WorkflowViewState.IdRef="Sequence_31">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="sd:DataTable" Name="QC_Trainers" />
+            <Variable x:TypeArguments="x:Int32" Name="d" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ReadRange AddHeaders="True" DataTable="[QC_Trainers]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="408.8,88" sap2010:WorkflowViewState.IdRef="ReadRange_7" Range="A45:A86" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[d]" DataTable="[QC_Trainers]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="408.8,741.6" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+            <ui:ForEachRow.Body>
+              <ActivityAction x:TypeArguments="sd:DataRow">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,620.8" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="Trners" />
+                    <Variable x:TypeArguments="x:String" Name="Avlble" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ReadCellFormula Cell="[&quot;B&quot;+Cstr(d+45)]" DisplayName="Read Cell Formula" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadCellFormula_10" Result="[Trners]" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+                  <ui:ReadCellFormula Cell="[&quot;C&quot;+Cstr(d+45)]" DisplayName="Read Cell Formula" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadCellFormula_11" Result="[Avlble]" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+                  <ui:WriteCell Cell="[&quot;B&quot;+Cstr(d+45)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_16" SheetName="[CurrWeek.Month.ToString + &quot;-&quot; + CurrWeek.Day.ToString + &quot;-&quot; + CurrWeek.Year.ToString.Substring(2)]" Text="[&quot;=&quot;+Trners]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+                  <ui:WriteCell Cell="[&quot;C&quot;+Cstr(d+45)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_17" SheetName="[CurrWeek.Month.ToString + &quot;-&quot; + CurrWeek.Day.ToString + &quot;-&quot; + CurrWeek.Year.ToString.Substring(2)]" Text="[&quot;=&quot;+Avlble]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEachRow.Body>
+          </ui:ForEachRow>
+        </Sequence>
+      </Sequence>
     </Sequence>
     <Sequence DisplayName="Reads QcWeeks Column And Increments" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
       <Sequence.Variables>
