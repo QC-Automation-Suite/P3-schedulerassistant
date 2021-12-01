@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>895.2,8309.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>895.2,8378.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>EvaluateNewSheet_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="31">
@@ -89,7 +89,7 @@
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="EvaluateNewSheet" sap:VirtualizedContainerService.HintSize="608.8,8244.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="EvaluateNewSheet" sap:VirtualizedContainerService.HintSize="684,8313.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="UpdatedSheet" />
       <Variable x:TypeArguments="sd:DataTable" Name="Batch" />
@@ -104,8 +104,8 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange AddHeaders="False" DataTable="[Batch]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="567.2,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" PreserveFormat="True" Range="A3:I35" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[i]" DataTable="[Batch]" DisplayName="Removes extra 1 added to qcWeek column" sap:VirtualizedContainerService.HintSize="567.2,52.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ReadRange AddHeaders="False" DataTable="[Batch]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="642.4,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" PreserveFormat="True" Range="A3:I35" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[i]" DataTable="[Batch]" DisplayName="Removes extra 1 added to qcWeek column" sap:VirtualizedContainerService.HintSize="642.4,52.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
@@ -180,7 +180,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <Sequence DisplayName="Add Showcase to Status Column" sap:VirtualizedContainerService.HintSize="567.2,7745.6" sap2010:WorkflowViewState.IdRef="Sequence_33">
+    <Sequence DisplayName="Add Showcase to Status Column" sap:VirtualizedContainerService.HintSize="642.4,7814.4" sap2010:WorkflowViewState.IdRef="Sequence_33">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="showCase" />
         <Variable x:TypeArguments="x:Int32" Name="l" />
@@ -192,7 +192,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="525.6,262.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_7" InstanceCachePeriod="3000" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="600.8,262.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_7" InstanceCachePeriod="3000" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
@@ -209,8 +209,8 @@
           </ActivityAction>
         </ui:ExcelApplicationScope.Body>
       </ui:ExcelApplicationScope>
-      <ui:ReadRange AddHeaders="False" DataTable="[showCase]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="525.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" Range="B3:I35" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[l]" DataTable="[showCase]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="525.6,951.2" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+      <ui:ReadRange AddHeaders="False" DataTable="[showCase]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="600.8,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" Range="B3:I35" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[l]" DataTable="[showCase]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="600.8,951.2" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -256,7 +256,7 @@
           </ActivityAction>
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[l]" DataTable="[showCase]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="525.6,617.6" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[l]" DataTable="[showCase]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="600.8,617.6" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -290,7 +290,7 @@
           </ActivityAction>
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[l]" DataTable="[showCase]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="525.6,951.2" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[l]" DataTable="[showCase]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="600.8,951.2" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -336,7 +336,7 @@
           </ActivityAction>
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[l]" DataTable="[showCase]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="525.6,951.2" sap2010:WorkflowViewState.IdRef="ForEachRow_7">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[l]" DataTable="[showCase]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="600.8,951.2" sap2010:WorkflowViewState.IdRef="ForEachRow_7">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -382,7 +382,7 @@
           </ActivityAction>
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[l]" DataTable="[showCase]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="525.6,951.2" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[l]" DataTable="[showCase]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="600.8,951.2" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -428,7 +428,7 @@
           </ActivityAction>
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[l]" DataTable="[showCase]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="525.6,951.2" sap2010:WorkflowViewState.IdRef="ForEachRow_9">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[l]" DataTable="[showCase]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="600.8,951.2" sap2010:WorkflowViewState.IdRef="ForEachRow_9">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -474,7 +474,7 @@
           </ActivityAction>
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[l]" DataTable="[showCase]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="525.6,617.6" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[l]" DataTable="[showCase]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="600.8,617.6" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -508,42 +508,47 @@
           </ActivityAction>
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[l]" DataTable="[showCase]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="525.6,951.2" sap2010:WorkflowViewState.IdRef="ForEachRow_12">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[l]" DataTable="[showCase]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="600.8,1020" sap2010:WorkflowViewState.IdRef="ForEachRow_12">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="week" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="492,830.4" sap2010:WorkflowViewState.IdRef="Sequence_79">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="567.2,899.2" sap2010:WorkflowViewState.IdRef="Sequence_79">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="450.4,737.6" sap2010:WorkflowViewState.IdRef="IfElseIf_9">
+              <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="525.6,806.4" sap2010:WorkflowViewState.IdRef="IfElseIf_9">
                 <ui:IfElseIf.ConditionBlocks>
                   <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                     <ui:IfElseIfBlock BlockType="If" Condition="[week(&quot;Column7&quot;).ToString = &quot;6&quot;]">
                       <ui:IfElseIfBlock.Then>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,208.8" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="475.2,611.2" sap2010:WorkflowViewState.IdRef="Sequence_77">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:WriteCell Cell="[&quot;M&quot;+Cstr(l+3)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_20" SheetName="[In_Sheet.Last]" Text=" " WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
-                        </Sequence>
-                      </ui:IfElseIfBlock.Then>
-                    </ui:IfElseIfBlock>
-                    <ui:IfElseIfBlock BlockType="ElseIf" Condition="[week(&quot;Column7&quot;).ToString = &quot;9&quot; and Not week(&quot;Column0&quot;).ToString.Contains(&quot;Extended&quot;)]">
-                      <ui:IfElseIfBlock.Then>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,208.8" sap2010:WorkflowViewState.IdRef="Sequence_78">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <ui:WriteCell Cell="[&quot;M&quot;+Cstr(l+3)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_21" SheetName="[In_Sheet.Last]" Text=" " WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
+                          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="433.6,518.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_8" InstanceCachePeriod="3000" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx">
+                            <ui:ExcelApplicationScope.Body>
+                              <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,408.8" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:ExcelSetRangeColor Color="[yellow]" DisplayName="Set Range Color" sap:VirtualizedContainerService.HintSize="333.6,188" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_1" Range="[&quot;I&quot;+Cstr(l+3)]" SheetName="[In_Sheet.Last]" />
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;wk 6 highlighted&quot;]" />
+                                </Sequence>
+                              </ActivityAction>
+                            </ui:ExcelApplicationScope.Body>
+                          </ui:ExcelApplicationScope>
                         </Sequence>
                       </ui:IfElseIfBlock.Then>
                     </ui:IfElseIfBlock>
@@ -555,7 +560,7 @@
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
     </Sequence>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[j]" DataTable="[Batch]" DisplayName="Deletes Rows where qcWeek &gt; 12" sap:VirtualizedContainerService.HintSize="567.2,52.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[j]" DataTable="[Batch]" DisplayName="Deletes Rows where qcWeek &gt; 12" sap:VirtualizedContainerService.HintSize="642.4,52.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
@@ -662,7 +667,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[k]" DataTable="[Batch]" DisplayName="Deletes Rows where qcWeek &gt; 10 for regular batches" sap:VirtualizedContainerService.HintSize="567.2,52.8" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[k]" DataTable="[Batch]" DisplayName="Deletes Rows where qcWeek &gt; 10 for regular batches" sap:VirtualizedContainerService.HintSize="642.4,52.8" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
