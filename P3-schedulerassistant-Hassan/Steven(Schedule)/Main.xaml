@@ -604,7 +604,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
-      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="Hello, we hope you are having an amazing day. Please enjoy the attached PDF copy of the updated schedule" DisplayName="Send SMTP Mail Message" Email="[username]" EnableSSL="True" From="sagenor73@gmail.com" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Name="Steven" Port="465" SecureConnection="Auto" SecurePassword="[pass]" Server="smtp.gmail.com" Subject="New QC Schedule" To="stevenagenor@gmail.com">
+      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="Hello, we hope you are having an amazing day. Please enjoy the attached PDF copy of the updated schedule" DisplayName="Send SMTP Mail Message" Email="[username]" EnableSSL="True" From="[username]" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Name="Steven" Port="465" SecureConnection="Auto" SecurePassword="[pass]" Server="smtp.gmail.com" Subject="New QC Schedule" To="stevenagenor@gmail.com">
         <ui:SendMail.Files>
           <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
             <InArgument x:TypeArguments="x:String">PDF\QC Schedule.pdf</InArgument>
