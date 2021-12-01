@@ -101,7 +101,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ucas:DownloadStorageFile TimeoutMS="{x:Null}" Destination="Schedule\Dummy QC Schedule Copy.xlsx" DisplayName="Download Storage File" FolderPath="Shared/P3" sap:VirtualizedContainerService.HintSize="625.6,188" sap2010:WorkflowViewState.IdRef="DownloadStorageFile_1" Path="Dummy QC Schedule Copy.xlsx" StorageBucketName="Schedule" />
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="625.6,224.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" Workbook="[Dummy]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="625.6,224.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Workbook="[Dummy]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
@@ -123,7 +123,7 @@
         <InArgument x:TypeArguments="scg:List(x:String)" x:Key="In_Sheet">[Out_Sheet]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="625.6,224.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" Visible="False" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="625.6,224.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
@@ -145,7 +145,7 @@
         <InArgument x:TypeArguments="scg:List(x:String)" x:Key="In_Sheet">[Out_Sheet]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="625.6,224.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" Visible="False" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="625.6,224.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
