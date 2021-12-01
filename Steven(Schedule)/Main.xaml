@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>814.4,4476.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>895.2,4476.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
@@ -217,9 +217,7 @@
             <ui:SendOutlookMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Account="sa1430@mynsu.nova.edu" Body="Hello, we hope you are having an amazing day. Please enjoy the attached PDF copy of the updated schedule" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" SentOnBehalfOfName="Steven" Subject="New QC Schedule" To="mishuba14@gmail.com">
               <ui:SendOutlookMail.Files>
                 <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                  <InArgument x:TypeArguments="x:String">
-                    <Literal x:TypeArguments="x:String">PDF\QC Schedule.pdf</Literal>
-                  </InArgument>
+                  <InArgument x:TypeArguments="x:String">PDF\QC Schedule.pdf</InArgument>
                 </scg:List>
               </ui:SendOutlookMail.Files>
             </ui:SendOutlookMail>
@@ -238,7 +236,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Outlook]" Body="Hello, we hope you are having an amazing day. Please enjoy the attached PDF copy of the updated schedule" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="433.6,397.6" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="New QC Schedule" To="mishuba14@gmail.com" UseDocumentAsBody="False">
+              <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Outlook]" Body="Hello, we hope you are having an amazing day. Please enjoy the attached PDF copy of the updated schedule" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="433.6,397.6" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="New QC Schedule" To="sagenor73@gmail.com" UseDocumentAsBody="False">
                 <umab:SendMailX.Files>
                   <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
                     <InArgument x:TypeArguments="x:String">PDF\QC Schedule.pdf</InArgument>
@@ -270,9 +268,7 @@
             <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Hello, we hope you are having an amazing day. Please enjoy the attached PDF copy of the updated schedule" DisplayName="Send SMTP Mail Message" Email="sagenor73@gmail.com" EnableSSL="True" From="sagenor73@gmail.com" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Name="Steven" Password="Sage123!" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="New QC Schedule" To="mishuba14@gmail.com">
               <ui:SendMail.Files>
                 <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                  <InArgument x:TypeArguments="x:String">
-                    <Literal x:TypeArguments="x:String">PDF\QC Schedule.pdf</Literal>
-                  </InArgument>
+                  <InArgument x:TypeArguments="x:String">PDF\QC Schedule.pdf</InArgument>
                 </scg:List>
               </ui:SendMail.Files>
             </ui:SendMail>
