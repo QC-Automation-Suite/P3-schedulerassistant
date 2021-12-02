@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>688,3127</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>895.2,2565.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="45">
@@ -105,7 +105,7 @@
       <AssemblyReference>System.Security.Permissions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="676,3062" sap2010:WorkflowViewState.IdRef="Sequence_11">
+  <Sequence sap:VirtualizedContainerService.HintSize="641.6,2500.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtOuOfOffice" />
@@ -120,28 +120,28 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange AddHeaders="True" DataTable="[dt]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="634,87" sap2010:WorkflowViewState.IdRef="ReadRange_8" Range="B44:C85" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="filters trainers who are available." DataTable="[dt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="634,576" sap2010:WorkflowViewState.IdRef="ForEachRow_9">
+    <ui:ReadRange AddHeaders="True" DataTable="[dt]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="600,88" sap2010:WorkflowViewState.IdRef="ReadRange_8" Range="B44:C85" SheetName="[In_Sheet.Last]" WorkbookPath="Dummy QC Schedule Copy.xlsx" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="filters trainers who are available." DataTable="[dt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="600,576.8" sap2010:WorkflowViewState.IdRef="ForEachRow_9">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,424" sap2010:WorkflowViewState.IdRef="Sequence_28">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="524.8,424.8" sap2010:WorkflowViewState.IdRef="Sequence_28">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[CurrentRow.Item(&quot;AVAILABLE?&quot;).ToString = &quot;True&quot;]" sap:VirtualizedContainerService.HintSize="484,332" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[CurrentRow.Item(&quot;AVAILABLE?&quot;).ToString = &quot;True&quot;]" sap:VirtualizedContainerService.HintSize="483.2,332" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_26">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_34">
+                  <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_34">
                     <Assign.To>
                       <OutArgument x:TypeArguments="sd:DataTable">[mydt]</OutArgument>
                     </Assign.To>
@@ -170,34 +170,34 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <ui:ReadRange AddHeaders="True" DataTable="[dtOuOfOffice]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="634,87" sap2010:WorkflowViewState.IdRef="ReadRange_9" Range="J1:J41" SheetName="[In_Sheet.Last]" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="filters trainers who are in ooo, pto, or start teaching batch in a week." DataTable="[dtOuOfOffice]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="634,672" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
+    <ui:ReadRange AddHeaders="True" DataTable="[dtOuOfOffice]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="600,88" sap2010:WorkflowViewState.IdRef="ReadRange_9" Range="J1:J41" SheetName="[In_Sheet.Last]" WorkbookPath="Dummy QC Schedule Copy.xlsx" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="filters trainers who are in ooo, pto, or start teaching batch in a week." DataTable="[dtOuOfOffice]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="600,673.6" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="568,520" sap2010:WorkflowViewState.IdRef="Sequence_118">
+          <Sequence sap:VirtualizedContainerService.HintSize="566.4,521.6" sap2010:WorkflowViewState.IdRef="Sequence_118">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,428" sap2010:WorkflowViewState.IdRef="Sequence_98">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="524.8,428.8" sap2010:WorkflowViewState.IdRef="Sequence_98">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If Condition="[CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Ronin&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Jordan&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Krystal&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Gael&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Dale&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Cristopher&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Andreas&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Miracle&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Zavier&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Curtis&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Margaret&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Russell&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Cassius&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Heather&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Triston&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Kenzie&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Skyler&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Triston&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Jordan&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Erika&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Kayley&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Kallie&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Case&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Tatum&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Muhammad&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Francisco&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Tristin&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Elena&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Bailee&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Mikayla&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Charlotte&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Tanner&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Valentin&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Angelo&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Shyanne&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Remington&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Will&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Janiah&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Brenton&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Braylen&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Chaz&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Remington&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Jon&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Asia&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Mary&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Dexter&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Harry&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Patricia&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Diana&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Drew&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Ashyah&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Ashya&quot;)]" sap:VirtualizedContainerService.HintSize="484,336" sap2010:WorkflowViewState.IdRef="If_6">
+              <If Condition="[CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Ronin&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Jordan&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Krystal&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Gael&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Dale&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Cristopher&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Andreas&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Miracle&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Zavier&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Curtis&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Margaret&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Russell&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Cassius&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Heather&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Triston&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Kenzie&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Skyler&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Triston&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Jordan&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Erika&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Kayley&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Kallie&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Case&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Tatum&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Muhammad&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Francisco&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Tristin&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Elena&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Bailee&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Mikayla&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Charlotte&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Tanner&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Valentin&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Angelo&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Shyanne&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Remington&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Will&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Janiah&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Brenton&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Braylen&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Chaz&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Remington&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Jon&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Asia&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Mary&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Dexter&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Harry&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Patricia&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Diana&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Drew&quot;) Or CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Ashyah&quot;) Or&#xA;CurrentRow.Item(&quot;Day&quot;).ToString.Contains(&quot;Ashya&quot;)]" sap:VirtualizedContainerService.HintSize="483.2,336" sap2010:WorkflowViewState.IdRef="If_6">
                 <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_119">
+                  <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_119">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_33">
+                    <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_33">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[ooo]</OutArgument>
                       </Assign.To>
@@ -227,14 +227,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <Sequence sap2010:Annotation.AnnotationText="only shows trainers who are available and not in ooo, pto, nor starting teaching a batch in a week." sap:VirtualizedContainerService.HintSize="634,418" sap2010:WorkflowViewState.IdRef="Sequence_136">
+    <Sequence sap2010:Annotation.AnnotationText="only shows trainers who are available and not in ooo, pto, nor starting teaching a batch in a week." sap:VirtualizedContainerService.HintSize="600,420" sap2010:WorkflowViewState.IdRef="Sequence_136">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:FilterDataTable DataTable="[mydt]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="334,162" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" OutputDataTable="[freeQC]" SelectColumnsMode="Keep">
+      <ui:FilterDataTable DataTable="[mydt]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="333.6,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" OutputDataTable="[freeQC]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="16">
             <ui:FilterOperationArgument BooleanOperator="And" Operator="STARTSWITH">
@@ -317,31 +317,31 @@
           </scg:List>
         </ui:FilterDataTable.SelectColumns>
       </ui:FilterDataTable>
-      <ui:OutputDataTable DataTable="[freeQC]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="334,80" sap2010:WorkflowViewState.IdRef="OutputDataTable_3" Text="[ooo]" />
+      <ui:OutputDataTable DataTable="[freeQC]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="333.6,80.8" sap2010:WorkflowViewState.IdRef="OutputDataTable_3" Text="[ooo]" />
     </Sequence>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="634,223" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Schedule\Dummy QC Schedule Copy.xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="600,224.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Dummy QC Schedule Copy.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_137">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_137">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelGetWorkbookSheets DisplayName="Get Workbook Sheets" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ExcelGetWorkbookSheets_2" Sheets="[OutSheets]" />
+            <ui:ExcelGetWorkbookSheets DisplayName="Get Workbook Sheets" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="ExcelGetWorkbookSheets_2" Sheets="[OutSheets]" />
           </Sequence>
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
     </ui:ExcelApplicationScope>
-    <Flowchart sap2010:Annotation.AnnotationText="Assign QC analysts and trainers to a batch." sap:VirtualizedContainerService.HintSize="634,667" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart sap2010:Annotation.AnnotationText="Assign QC analysts and trainers to a batch." sap:VirtualizedContainerService.HintSize="633.6,668" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
-          <av:Size x:Key="ShapeSize">60,75</av:Size>
+          <av:Size x:Key="ShapeSize">60,75.2</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 310,107.5 310,114</av:PointCollection>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
@@ -353,13 +353,15 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">210,114</av:Point>
-            <av:Size x:Key="ShapeSize">200,52</av:Size>
+            <av:Size x:Key="ShapeSize">200,52.8</av:Size>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke buildAuditorSkillSetTables workflow" sap:VirtualizedContainerService.HintSize="369,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Hassan(Schedule)\buildAuditorSkillSetTables.xaml">
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke buildAuditorSkillSetTables workflow" sap:VirtualizedContainerService.HintSize="369.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Hassan(Schedule)\buildAuditorSkillSetTables.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <InArgument x:TypeArguments="x:String" x:Key="argument1" />
-            <InArgument x:TypeArguments="scg:List(x:String)" x:Key="In_Sheet">[In_Sheet]</InArgument>
+            <InArgument x:TypeArguments="scg:List(x:String)" x:Key="In_Sheet">
+              <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="In_Sheet" />
+            </InArgument>
           </ui:InvokeWorkflowFile.Arguments>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
