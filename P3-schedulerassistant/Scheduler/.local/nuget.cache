@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9sTkQaExcf3M0STP7cZemxEwPB98dhBNhuGlI3Ohp5sNjFn/CU/zWY+PRrRs5OtJ8ftkpyxMQkPB2VdVswhOug==",
+  "dgSpecHash": "i7Ltij40xfGjAqWRaF/OYF53ovdHTQjtyBvnAyK0lqjfFqfgaznMiJ3K8dVIW8GW24B7qPEf3PUfHSftUAbP6Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Steven\\Desktop\\P3-schedulerassistant\\Scheduler\\.local\\",
+  "projectFilePath": "C:\\Users\\Steven\\Documents\\UiPath\\P3-schedulerassistant\\P3-schedulerassistant\\Scheduler\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\Steven\\.nuget\\packages\\avalonedit\\6.0.1\\avalonedit.6.0.1.nupkg.sha512",
     "C:\\Users\\Steven\\.nuget\\packages\\closedxml\\0.95.4\\closedxml.0.95.4.nupkg.sha512",
