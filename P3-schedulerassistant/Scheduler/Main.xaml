@@ -109,7 +109,7 @@
       <AssemblyReference>Microsoft.Extensions.DependencyModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="1080.8,3918.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="1080.8,5084" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="pdf" />
     </Sequence.Variables>
@@ -641,7 +641,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <Sequence DisplayName="Email PDF" sap:VirtualizedContainerService.HintSize="1039.2,1558.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
+    <Sequence DisplayName="Email PDF" sap:VirtualizedContainerService.HintSize="1039.2,2130.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="login" />
         <Variable x:TypeArguments="ss:SecureString" Name="user" />
@@ -655,10 +655,10 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="997.6,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Started PDF conversion&quot;]">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="997.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Started PDF conversion&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
@@ -696,16 +696,16 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
-      <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="pdf.docx" sap:VirtualizedContainerService.HintSize="997.6,52.8" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
+      <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="pdf.docx" sap:VirtualizedContainerService.HintSize="997.6,544.8" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
         <p:WordApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WordDocument">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_52">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="475.2,435.2" sap2010:WorkflowViewState.IdRef="Sequence_52">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -717,7 +717,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </p:WordInsertDataTable>
-              <p:WordExportToPdf DisplayName="Save Document as PDF" FilePath="PDF\QC Schedule.pdf" sap:VirtualizedContainerService.HintSize="433.6,111.2" sap2010:WorkflowViewState.IdRef="WordExportToPdf_1">
+              <p:WordExportToPdf DisplayName="Save Document as PDF" FilePath="QC Schedule.pdf" sap:VirtualizedContainerService.HintSize="433.6,111.2" sap2010:WorkflowViewState.IdRef="WordExportToPdf_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -730,15 +730,15 @@
         </p:WordApplicationScope.Body>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </p:WordApplicationScope>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="997.6,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;Ended PDF Conversion&quot;]">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="997.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;Ended PDF Conversion&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
@@ -950,10 +950,10 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1039.2,52.8" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1039.2,646.4" sap2010:WorkflowViewState.IdRef="TryCatch_9">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -964,7 +964,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:Delete ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="283.2,80.8" sap2010:WorkflowViewState.IdRef="Delete_5" Path="PDF\QC Schedule.pdf" />
+          <ui:Delete ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="283.2,80.8" sap2010:WorkflowViewState.IdRef="Delete_5" Path="QC Schedule.pdf" />
           <ui:Delete ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="283.2,80.8" sap2010:WorkflowViewState.IdRef="Delete_4" Path="pdf.docx" />
           <ui:Delete ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="283.2,80.8" sap2010:WorkflowViewState.IdRef="Delete_1" Path="QCSchedule.xlsx" />
         </Sequence>
