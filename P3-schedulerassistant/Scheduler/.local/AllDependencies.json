@@ -18566,15 +18566,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Steven\\.nuget\\packages\\": {}
+    "C:\\Users\\hahme\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "HTTP Request",
       "projectName": "HTTP Request",
-      "projectPath": "C:\\Users\\Steven\\Documents\\UiPath\\P3-schedulerassistant\\P3-schedulerassistant\\Scheduler\\.local",
-      "packagesPath": "C:\\Users\\Steven\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Steven\\Documents\\UiPath\\P3-schedulerassistant\\P3-schedulerassistant\\Scheduler\\.local"
+      "projectPath": "C:\\Users\\hahme\\Documents\\revature\\hbksilver-code\\P3-schedulerassistant\\P3-schedulerassistant\\Scheduler\\.local",
+      "packagesPath": "C:\\Users\\hahme\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hahme\\Documents\\revature\\hbksilver-code\\P3-schedulerassistant\\P3-schedulerassistant\\Scheduler\\.local"
     },
     "frameworks": {
       "net5.0-windows7.0": {
@@ -18610,7 +18610,7 @@
             "version": "[1.7.3, 1.7.3]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\hahme\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {
