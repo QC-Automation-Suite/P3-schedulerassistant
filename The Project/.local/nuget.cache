@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dDoNioppc+Ao/tFTvFR/ZNwo+Z4oFr+CFE6E3gLUvJ4sw4gjTLb3qJ89B0gWTp6J+CG2yZcgCBwbP/9iyG9bIA==",
+  "dgSpecHash": "Ssg6aQFm+igEm6Q7Ak14ofcK8UBpWk2V3JeleufVIJMjJ56eVFvFmLvsYOQvAAAYu81DmNeQhcJ6RFGZsK8Xhg==",
   "success": true,
-  "projectFilePath": "M:\\Repository\\Contract&Jobs\\Revature\\Projects\\Project 3\\QC\\SchedulerAssistant\\The Project\\.local\\",
+  "projectFilePath": "M:\\Repository\\Contract&Jobs\\Revature\\Projects\\Project 3\\QC\\SchedulerAssistant\\P3-schedulerassistant\\The Project\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\Owner\\.nuget\\packages\\avalonedit\\6.0.1\\avalonedit.6.0.1.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\closedxml\\0.95.4\\closedxml.0.95.4.nupkg.sha512",
